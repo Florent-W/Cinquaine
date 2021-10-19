@@ -1,11 +1,18 @@
 <?php 
 
-	require_once("controller/HomeController.php"); // File don't exist yet 
+	require_once("controller/controllerHome.php");
 
 	if(isset($_GET['action'])) {
 		$action = $_GET['action'];
 	}
 	else {
-		$action = ''; // Put default action here
+		$action = 'displayHome';
+	}
+
+	try {
+		ControllerHome::$action();
+	}
+	catch(string $e) {
+		echo $e;
 	}
 ?>
