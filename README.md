@@ -5,7 +5,7 @@
 JQuery / Bootstrap / MySQL / PHP
 
 # Tools
-[Github Desktop](https://desktop.github.com/)
+[Github Desktop](https://desktop.github.com/)\
 [Trello](https://trello.com/invite/b/yqDpcBCJ/01b885b91bb7001233968b4541e71e92/cinquaine)
 
 # About
