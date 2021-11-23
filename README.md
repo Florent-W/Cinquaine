@@ -11,10 +11,10 @@ Cinquaine's goal is to empower individuals and strengthen communities by providi
 
 ## Powered by
 
-[![Bootstrap](./bootstrap-logo.svg)](https://getbootstrap.com/)
-[![JQuery](./JQuery-Logo.svg)](https://jquery.com/)
-[![MySQL](./powered-by-mysql.svg)](https://www.php.net/)
-[![PHP](./Official_PHP_Logo.svg)](https://www.php.net/)
+[![Bootstrap](./md/bootstrap-logo.svg)](https://getbootstrap.com/)
+[![JQuery](./md/JQuery-Logo.svg)](https://jquery.com/)
+[![MySQL](./md/powered-by-mysql.svg)](https://www.php.net/)
+[![PHP](./md/Official_PHP_Logo.svg)](https://www.php.net/)
 
 ## Tools
 
