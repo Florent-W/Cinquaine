@@ -3,7 +3,7 @@
 		private static $hostname = 'localhost';
 		private static $database = 'jclerys';
 		private static $login = 'jclerys';
-		private static $pwd = 'Allblack112';
+		private static $pwd = 'sqlpassjclerys';
 
 		private static $tabUTF8 = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
