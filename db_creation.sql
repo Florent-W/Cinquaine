@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `id_type_service` int NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `id_user` int NOT NULL,
+  `title` varchar(55) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_type_service_fk` (`id_type_service`),
   KEY `id_user_fk` (`id_user`)
