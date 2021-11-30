@@ -1,0 +1,89 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="354" height="263" view_box="0 0 354 263"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 11 Nov 2021 04:49:55</desc>
+
+<rect id="frame" x="0" y="0" width="354" height="263" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association peut interagir -->
+<line x1="311" y1="178" x2="196" y2="178" stroke="#4393c3" stroke-width="2"/>
+<text x="251" y="195.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="62" y1="178" x2="196" y2="178" stroke="#4393c3" stroke-width="2"/>
+<text x="120" y="195.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-peut interagir">
+	<path d="M 231 153 a 14 14 90 0 1 14 14 V 178 h -98 V 167 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 245 178.0 v 11 a 14 14 90 0 1 -14 14 H 161 a 14 14 90 0 1 -14 -14 V 178.0 H 98" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="147" y="153" width="98" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="147" y1="178" x2="245" y2="178" stroke="#4393c3" stroke-width="1"/>
+	<text x="154" y="170.7" fill="#000000" font-family="Verdana" font-size="12">peut interagir</text>
+</g>
+
+<!-- Association est un -->
+<line x1="196" y1="43" x2="62" y2="43" stroke="#4393c3" stroke-width="2"/>
+<text x="117" y="60.0" fill="#b2182b" font-family="Verdana" font-size="12">0,1</text>
+<line x1="62" y1="178" x2="62" y2="43" stroke="#4393c3" stroke-width="2"/>
+<text x="67.0" y="94" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-est un">
+	<path d="M 75 18 a 14 14 90 0 1 14 14 V 43 h -54 V 32 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 89 43.0 v 11 a 14 14 90 0 1 -14 14 H 49 a 14 14 90 0 1 -14 -14 V 43.0 H 54" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="35" y="18" width="54" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="35" y1="43" x2="89" y2="43" stroke="#4393c3" stroke-width="1"/>
+	<text x="42" y="35.7" fill="#000000" font-family="Verdana" font-size="12">est un</text>
+</g>
+
+<!-- Entity service -->
+<g id="entity-service">
+	<g id="frame-service">
+		<rect x="9" y="102" width="106" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="9" y="127.0" width="106" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="9" y="102" width="106" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="9" y1="127" x2="115" y2="127" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="40" y="119.7" fill="#000000" font-family="Verdana" font-size="12">service</text>
+	<text x="14" y="144.7" fill="#000000" font-family="Verdana" font-size="12">id_service</text>
+	<line x1="14" y1="147" x2="76" y2="147" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="161.7" fill="#000000" font-family="Verdana" font-size="12">id_type_service</text>
+	<line x1="14" y1="164" x2="110" y2="164" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="178.8" fill="#000000" font-family="Verdana" font-size="12">id_user</text>
+	<line x1="14" y1="181" x2="60" y2="181" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="195.8" fill="#000000" font-family="Verdana" font-size="12">date_start</text>
+	<text x="14" y="212.8" fill="#000000" font-family="Verdana" font-size="12">date_end</text>
+	<text x="14" y="229.8" fill="#000000" font-family="Verdana" font-size="12">price</text>
+	<text x="14" y="246.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+</g>
+
+<!-- Entity types_service -->
+<g id="entity-types_service">
+	<g id="frame-types_service">
+		<rect x="143" y="9" width="106" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="143" y="34.0" width="106" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="143" y="9" width="106" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="143" y1="34" x2="249" y2="34" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="154" y="26.7" fill="#000000" font-family="Verdana" font-size="12">types_service</text>
+	<text x="148" y="51.8" fill="#000000" font-family="Verdana" font-size="12">id_type_service</text>
+	<line x1="148" y1="54" x2="244" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="148" y="68.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+</g>
+
+<!-- Entity user -->
+<g id="entity-user">
+	<g id="frame-user">
+		<rect x="277" y="110" width="68" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="277" y="135.0" width="68" height="111" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="277" y="110" width="68" height="136" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="277" y1="135" x2="345" y2="135" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="297" y="127.7" fill="#000000" font-family="Verdana" font-size="12">user</text>
+	<text x="282" y="152.7" fill="#000000" font-family="Verdana" font-size="12">id_user</text>
+	<line x1="282" y1="155" x2="328" y2="155" stroke="#000000" stroke-width="1"/>
+	<text x="282" y="169.7" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="282" y="186.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="282" y="203.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="282" y="220.8" fill="#000000" font-family="Verdana" font-size="12">tel</text>
+	<text x="282" y="237.8" fill="#000000" font-family="Verdana" font-size="12">solde</text>
+</g>
+</svg>
