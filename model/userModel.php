@@ -10,7 +10,7 @@ class User {
 
     public function __construct($name, $balance) {
         $this->name = $name;
-        $this->balance = balance;
+        $this->balance = $balance;
     }
 
     public static function getUser($id) {
