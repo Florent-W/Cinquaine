@@ -25,7 +25,7 @@
 			} 
 		}
 
-		public static function getPdo() {
+		public static function pdo() {
 			return self::$pdo;
 		}
 
