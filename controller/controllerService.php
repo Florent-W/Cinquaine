@@ -20,7 +20,7 @@ class ControllerService {
 		// Need to control the rights of the user
 		$id = $_GET["id"];
 		Service::deleteServiceById($id);
-		self::displayServices();
+		self::createService();
 	}
 
 	public static function createService() {
@@ -41,7 +41,7 @@ class ControllerService {
 			Service::addService($dateStart, $dateEnd, $idTypeService, $price, $idUser, $title);
 		}
 
-		self::displayServices();
+		self::createService();
 	}
 
 	public static function updateService() {
@@ -60,7 +60,7 @@ class ControllerService {
         $title = $_GET["title"];
 
 		Service::updateService($id, $date_start, $date_end, $id_type_service, $price, $title);
-		self::displayService();
+		self::createService();
 	}
 }
 ?>
