@@ -4,6 +4,6 @@ class ControllerHome {
 
 	public static function displayHome() {
 		require_once("view/Navbar.php");
+		require_once("view/index.html");
 	}
-
 }

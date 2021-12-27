@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,7 +27,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Tous nos service</a></li>
+                        <li><a class="dropdown-item" href="#!">Tous nos services</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="#!">Service populaire</a></li>
                         <li><a class="dropdown-item" href="#!">Nouveau service</a></li>
@@ -45,6 +46,3 @@
         </div>
     </div>
 </nav>
-
-</body>
-</html>

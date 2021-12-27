@@ -68,7 +68,7 @@ class TypeService {
     }
 
     public static function deleteTypeServiceById($id) {
-		$query = "DELETE FROM types_services WHERE id = :id;";
+		$query = "DELETE FROM types_services WHERE id = :id";
 		$req_prep = Connexion::pdo()->prepare($query);
 		$values = array("id" => $id);
 		try {

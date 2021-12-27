@@ -93,7 +93,7 @@ class Service {
     }
 
     public static function deleteServiceById($id) {
-		$query = "DELETE FROM services WHERE id = :id;";
+		$query = "DELETE FROM services WHERE id = :id";
 		$req_prep = Connexion::pdo()->prepare($query);
 		$values = array("id" => $id);
 		try {
