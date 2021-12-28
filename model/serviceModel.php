@@ -4,7 +4,7 @@ require_once "conf/Connexion.php";
 Connexion::connect();
 
 class Service {
-    private $id;
+    private $id_service;
     private $date_start;
     private $date_end;
     private $id_type_service;
@@ -13,7 +13,7 @@ class Service {
     private $title;
 
     // Getter of a service
-    public function getId() {return $this->id;}
+    public function getId() {return $this->id_service;}
 	public function getDateStart() {return $this->date_start;}
 	public function getDateEnd() {return $this->date_end;}
     public function getIdTypeService() {return $this->id_type_service;}
@@ -22,7 +22,7 @@ class Service {
     public function getTitle() {return $this->title;}
 
     // Setter of a service
-    public function setId($id) {$this->id = $id;}
+    public function setId($id_service) {$this->id_service = $id_service;}
 	public function setDateStart($date_start) {$this->date_start = $date_start;}
     public function setDateEnd($date_end) {$this->date_end = $date_end;}
     public function setIdTypeService($id_type_service) {$this->id_type_service = $id_type_service;}
@@ -31,9 +31,9 @@ class Service {
     public function setTitle($title) {$this->title = $title;}
 
     // Constructor of a service
-    public function __construct($id = NULL, $date_start = NULL, $date_end = NULL, $id_type_service = NULL, $price = NULL, $id_user = NULL, $title = NULL) {
-        if(!is_null($id) && !is_null($date_start) && !is_null($date_end) && !is_null($id_type_service) && !is_null($price) && !is_null($id_user) && !is_null($title)) {
-            $this->id = $id;
+    public function __construct($id_service = NULL, $date_start = NULL, $date_end = NULL, $id_type_service = NULL, $price = NULL, $id_user = NULL, $title = NULL) {
+        if(!is_null($id_service) && !is_null($date_start) && !is_null($date_end) && !is_null($id_type_service) && !is_null($price) && !is_null($id_user) && !is_null($title)) {
+            $this->id_service = $id_service;
             $this->date_start = $date_start;
             $this->date_end = $date_end;
             $this->id_type_service = $id_type_service;
@@ -43,10 +43,10 @@ class Service {
         }
     }
 
-    public static function getService($id) {
-        $query = "SELECT id, date_start, date_end, id_type_service, price, id_user, title FROM services WHERE id = :id";
+    public static function getService($id_service) {
+        $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title FROM services WHERE id_service = :id_service";
         $p_query = Connexion::pdo()->prepare($query);
-        $values = array("id" => $id);
+        $values = array("id_service" => $id_service);
         $result = [];
         try {
             $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
@@ -59,7 +59,7 @@ class Service {
     }
 
     public static function getAllServices() {
-        $query = "SELECT id, date_start, date_end, id_type_service, price, id_user, title FROM services";
+        $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title FROM services";
         $p_query = Connexion::pdo()->prepare($query);
         $result = [];
         try {
@@ -92,10 +92,10 @@ class Service {
 		}
     }
 
-    public static function deleteServiceById($id) {
-		$query = "DELETE FROM services WHERE id = :id";
+    public static function deleteServiceById($id_service) {
+		$query = "DELETE FROM services WHERE id_service = :id_service";
 		$req_prep = Connexion::pdo()->prepare($query);
-		$values = array("id" => $id);
+		$values = array("id_service" => $id_service);
 		try {
 			$req_prep->execute($values);
 			return true;
@@ -105,11 +105,11 @@ class Service {
 		return false;
 	}
 
-    public static function updateService($id, $date_start, $date_end, $id_type_service, $price, $id_user, $title) {
-		$query = "UPDATE services SET date_start = :date_start, date_end = :date_end, id_type_service = :id_type_service, price = :price, id_user = :id_user, title = :title WHERE id = :id";
+    public static function updateService($id_service, $date_start, $date_end, $id_type_service, $price, $id_user, $title) {
+		$query = "UPDATE services SET date_start = :date_start, date_end = :date_end, id_type_service = :id_type_service, price = :price, id_user = :id_user, title = :title WHERE id_service = :id_service";
 		$p_query = Connexion::pdo()->prepare($query);
         $values = array(
-            "id" => $id,
+            "id_service" => $id_service,
 			"date_start" => $date_start,
 			"date_end" => $date_end,
 			"id_type_service" => $id_type_service,
