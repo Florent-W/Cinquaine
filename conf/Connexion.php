@@ -4,7 +4,7 @@
 	    // IDENTIFIANT A REMPLACER POUR CORRESPONDRE AUX VOTRES
 
 		private static $hostname = 'localhost';
-		private static $database = 'cinquantaine';
+		private static $database = 'cinquaine';
 		private static $login = 'root';
 		private static $pwd = '';
 
