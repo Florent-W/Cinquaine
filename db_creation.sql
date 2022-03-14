@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `tguegan`
+-- Base de données : `cinquaine`
 --
 
 -- --------------------------------------------------------
@@ -81,8 +81,8 @@ ALTER TABLE `services`
   ADD CONSTRAINT `id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
-INSERT INTO `tguegan`.`users` (`id_user`, `name`, `password`) VALUES ('1', 'pobla', 'test');
-INSERT INTO `tguegan`.`users` (`id_user`, `name`, `password`) VALUES ('2', 'pablito', 'escobart');
+INSERT INTO `cinquaine`.`users` (`id_user`, `name`, `password`) VALUES ('1', 'pobla', 'test');
+INSERT INTO `cinquaine`.`users` (`id_user`, `name`, `password`) VALUES ('2', 'pablito', 'escobart');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
