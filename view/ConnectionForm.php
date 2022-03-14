@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<form action="routeur.php?action=login" method="post">
+<form action="index.php?action=login" method="post">
     <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
