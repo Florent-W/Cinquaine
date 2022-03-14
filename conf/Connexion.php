@@ -1,8 +1,9 @@
+
 <?php
 class Connexion
 {
-
 	// IDENTIFIANT A REMPLACER POUR CORRESPONDRE AUX VOTRES
+
 
 	private static $hostname = 'localhost';
 	private static $database = 'cinquaine';

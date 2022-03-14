@@ -35,14 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT id, name, password FROM users WHERE name = $_POST["uname"] ";
+        $sql = "SELECT id, name, password FROM users WHERE name = $name ";
 
         if ($stmt = $pdo->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
 
             // Set parameters
-            $param_username = trim($_POST["username"]);
+            $param_username = trim($_POST["uname"]);
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($stmt->rowCount() == 1) {
                     if ($row = $stmt->fetch()) {
                         $id = $row["id"];
-                        $username = $row["username"];
+                        $username = $row["name"];
                         $hashed_password = $row["password"];
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session

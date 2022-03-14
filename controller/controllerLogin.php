@@ -17,6 +17,7 @@ class ControllerLogin
 
         // Si le user existe et que tout va bien
         // créer le cookie de session + retour sur la page d'accueil
+
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
