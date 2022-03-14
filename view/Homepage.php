@@ -1,6 +1,3 @@
-<head>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
 <!-- Header-->
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
