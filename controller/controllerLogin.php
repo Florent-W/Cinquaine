@@ -11,6 +11,7 @@ class ControllerLogin
 
     public static function login($username, $pwd)
     {
+        require_once("conf/Connexion.php");
         ControllerHome::displayHome();
         Connexion::connect();
 
@@ -22,8 +23,7 @@ class ControllerLogin
         $psw = $_POST['psw'];
 
         $sql = 'SELECT $uname from users where "password" = $psw';
-        $req_prep = self::$pdo->prepare($sql);
-        $req_prep->execute();
+        $req_prep = Connexion::pdo()->prepare($sql);
         $tabResults = $req_prep->fetchAll();
 
         if (!empty($tabResults)) {
