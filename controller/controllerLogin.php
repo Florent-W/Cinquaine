@@ -11,6 +11,7 @@ class ControllerLogin
 
     public static function login($username, $pwd)
     {
+        session_start();
         require_once("conf/Connexion.php");
         ControllerHome::displayHome();
         Connexion::connect();
@@ -27,6 +28,12 @@ class ControllerLogin
         $tabResults = $req_prep->fetchAll();
 
         if (!empty($tabResults)) {
+            header('location : Homepage.php');
+        } else {
+
+            $messerr = "invalid username or password litle shit";
+            echo $messerr;
+            echo "<button href='/view/ConnectionForm'>Login</button>";
         }
     }
 
