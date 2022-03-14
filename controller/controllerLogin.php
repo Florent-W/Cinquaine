@@ -7,10 +7,12 @@ class ControllerLogin
     {
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
+        require_once("conf/Connexion.php");
     }
 
     public static function login($username, $pwd)
     {
+        require_once("conf/Connexion.php");
         ControllerHome::displayHome();
         Connexion::connect();
 

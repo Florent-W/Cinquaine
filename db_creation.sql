@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id_service` int NOT NULL AUTO_INCREMENT,
   `date_start` datetime NOT NULL,
   `date_end` datetime NOT NULL,
   `id_type_service` int NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `id_user` int NOT NULL,
   `title` varchar(55) NOT NULL,
   `image` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id_service`),
   KEY `id_type_service_fk` (`id_type_service`),
   KEY `id_user_fk` (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `services` (
 
 DROP TABLE IF EXISTS `types_services`;
 CREATE TABLE IF NOT EXISTS `types_services` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id_type_service` int NOT NULL AUTO_INCREMENT,
   `name` varchar(55) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -63,10 +63,10 @@ CREATE TABLE IF NOT EXISTS `types_services` (
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id_user` int NOT NULL AUTO_INCREMENT,
   `name` varchar(55) NOT NULL,
   `password` varchar(55) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
