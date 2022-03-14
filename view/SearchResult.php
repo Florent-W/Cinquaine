@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<form action="index.php" method="post">
+<form action="view/Homepage.php" method="post">
         <div class="search-list">
             <ul>
                 <li>test</li>
