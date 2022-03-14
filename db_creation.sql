@@ -77,12 +77,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Contraintes pour la table `services`
 --
 ALTER TABLE `services`
-  ADD CONSTRAINT `id_type_service_fk` FOREIGN KEY (`id_type_service`) REFERENCES `types_services` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `id_type_service_fk` FOREIGN KEY (`id_type_service`) REFERENCES `types_services` (`id_type_service`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
-INSERT INTO `cinquantaine`.`users` (`id`, `name`, `password`) VALUES ('1', 'pobla', 'test');
-INSERT INTO `cinquantaine`.`users` (`id`, `name`, `password`) VALUES ('2', 'pablito', 'escobart');
+INSERT INTO `cinquaine`.`users` (`id`, `name`, `password`) VALUES ('1', 'pobla', 'test');
+INSERT INTO `cinquaine`.`users` (`id`, `name`, `password`) VALUES ('2', 'pablito', 'escobart');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
