@@ -8,4 +8,6 @@ class ControllerHome {
 		require_once("view/Navbar.php");
 		require_once("index.php");
 	}
+
+
 }
