@@ -7,7 +7,6 @@ class ControllerLogin
     {
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
-        require_once("conf/Connexion.php");
     }
 
     public static function login($username, $pwd)
@@ -24,8 +23,7 @@ class ControllerLogin
         $psw = $_POST['psw'];
 
         $sql = 'SELECT $uname from users where "password" = $psw';
-        $req_prep = self::$pdo->prepare($sql);
-        $req_prep->execute();
+        $req_prep = Connexion::pdo()->prepare($sql);
         $tabResults = $req_prep->fetchAll();
 
 

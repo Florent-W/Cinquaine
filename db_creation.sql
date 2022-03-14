@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `types_services`;
 CREATE TABLE IF NOT EXISTS `types_services` (
   `id_type_service` int NOT NULL AUTO_INCREMENT,
   `name` varchar(55) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id_type_service`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
