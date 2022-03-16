@@ -29,6 +29,8 @@ class ControllerLogin
 
         if (!empty($tabResults)) {
             header('location : Homepage.php');
+            $_SESSION["id"] = $tabResults[0];
+            $_SESSION["uname"] = $_POST['uname'];
         } else {
 
             $messerr = "invalid username or password litle shit";
@@ -37,7 +39,8 @@ class ControllerLogin
         }
     }
 
-    public static function register() {
+    public static function register()
+    {
         ControllerHome::displayHome();
         Connexion::connect();
 

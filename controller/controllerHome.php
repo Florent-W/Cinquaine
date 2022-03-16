@@ -9,5 +9,11 @@ class ControllerHome {
 		require_once("view/Homepage.php");
 	}
 
+	public static function displayProfile() {
+		//TODO
+		//$services = Service::getAllServicesById();
+		require_once("view/Navbar.php");
+		require_once("view/Profile.php");
+	}
 
 }
