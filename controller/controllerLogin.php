@@ -37,7 +37,8 @@ class ControllerLogin
         }
     }
 
-    public static function register() {
+    public static function register()
+    {
         ControllerHome::displayHome();
         Connexion::connect();
 
