@@ -9,11 +9,11 @@ class ControllerLogin
         require_once("view/ConnectionForm.php");
     }
 
-    public static function login($username, $pwd)
+    public static function login()
     {
         session_start();
         require_once("conf/Connexion.php");
-        ControllerHome::displayHome();
+        //ControllerHome::displayHome();
         Connexion::connect();
 
 
@@ -23,19 +23,23 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
-        $sql = 'SELECT $uname from users where "password" = $psw';
+        $sql = "SELECT * from users where password = 'tes' AND name = 'pablo' ";
         $req_prep = Connexion::pdo()->prepare($sql);
         $tabResults = $req_prep->fetchAll();
 
         if (!empty($tabResults)) {
-            header('location : Homepage.php');
+            //header('location : Homepage.php');
             $_SESSION["id"] = $tabResults[0];
-            $_SESSION["uname"] = $_POST['uname'];
+            $_SESSION["name"] = $_POST['uname'];
         } else {
 
             $messerr = "invalid username or password litle shit";
             echo $messerr;
-            echo "<button href='/view/ConnectionForm'>Login</button>";
+            echo $uname;
+            ControllerLogin::displayLogin();
+            foreach ($tabResults as $test) {
+                echo $test;
+            }
         }
     }
 
