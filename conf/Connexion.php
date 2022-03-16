@@ -1,4 +1,3 @@
-
 <?php
 class Connexion
 {
@@ -6,9 +5,9 @@ class Connexion
 
 
 	private static $hostname = 'localhost';
-	private static $database = 'tguegan';
-	private static $login = 'tguegan';
-	private static $pwd = 'WdS4Q9mdPLKt54H';
+	private static $database = 'cinquaine';
+	private static $login = '';
+	private static $pwd = '';
 
 	private static $tabUTF8 = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
