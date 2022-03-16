@@ -6,7 +6,7 @@ class Connexion
 
 	private static $hostname = 'localhost';
 	private static $database = 'cinquaine';
-	private static $login = '';
+	private static $login = 'root';
 	private static $pwd = '';
 
 	private static $tabUTF8 = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
