@@ -1,16 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col">
-            <ul class="list-group">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
-            </ul>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col-sm order-sm-last mb-3">
+            <div class="card">
                 <div class="card-header">
                     Jean Eude
                 </div>
@@ -25,5 +16,39 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-8 order-sm-first">
+            <div class="d-flex flex-row mb-2" style="height:200px">
+                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
+                <div>
+                <h1>test</h1>
+                <h2>testing</h2>
+                <p>description</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row mb-2" style="height:200px">
+                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
+                <div>
+                <h1>test</h1>
+                <h2>testing</h2>
+                <p>description</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row mb-2" style="height:200px">
+                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
+                <div>
+                <h1>test</h1>
+                <h2>testing</h2>
+                <p>description</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row mb-2" style="height:200px">
+                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
+                <div>
+                <h1>test</h1>
+                <h2>testing</h2>
+                <p>description</p>
+                </div>
+            </div>
+        <div>
     </div>
-</div>
+</div> 

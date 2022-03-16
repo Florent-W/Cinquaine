@@ -36,7 +36,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item me-1"><a class="nav-link active" aria-current="page" href="#!"><i class="bi bi-plus-circle"style="margin-right:0.5rem"></i>Proposer un Service</a></li>
-                <li class="nav-item me-1"><a class="nav-link active" aria-current="page" href="#!"><i class="bi bi-person-circle"style="margin-right:0.5rem"></i>Compte</a></li>
+                <li class="nav-item me-1"><a class="nav-link active" aria-current="page" href="index.php?controller=controllerHome&action=displayProfile"><i class="bi bi-person-circle"style="margin-right:0.5rem"></i>Compte</a></li>
             </ul>
             <form class="d-flex">
                 <button style="margin-top: 15px" class="btn btn-outline-dark" type="submit">
