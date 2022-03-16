@@ -66,5 +66,12 @@ class ControllerService {
 		Service::updateService($id, $date_start, $date_end, $id_type_service, $price, $title);
 		self::createService();
 	}
+
+	public static function browseServices() {
+        $services = Service::getAllServices();
+
+		require_once("view/Navbar.php");
+		require_once("view/BrowseServices.php");
+	}
 }
 ?>
