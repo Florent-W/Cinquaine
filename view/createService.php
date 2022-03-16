@@ -9,7 +9,7 @@
     <input type="datetime-local" class="form-control" id="dateEnd" name="dateEnd">
   </div>
   <div class="form-group">
-    <label for="idTypeService">Type de Service</label>
+    <label for="idTypeService">Service Type</label>
       <select class="form-select" id="idTypeService" name="idTypeService">
           <?php foreach ($types_service as $type_service) {
             echo "<option value={$type_service->getId()}>{$type_service->getName()}</option>";
@@ -22,9 +22,13 @@
     <input type="number" class="form-control" id="price" name="price" placeholder="Price">
   </div>
   <div class="form-group">
-    <label for="idUser">Id User</label>
-    <input type="number" class="form-control" id="idUser" name="idUser">
-  </div>
+    <label for="idUser">User</label>
+      <select class="form-select" id="idUser" name="idUser">
+          <?php foreach ($users as $user) {
+              echo "<option value={$user->getId()}>{$user->getName()}</option>";
+          }
+          ?>
+      </select>  </div>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" name="title" placeholder="Title">

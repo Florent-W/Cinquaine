@@ -1,6 +1,7 @@
 <?php 
 require_once("./model/serviceModel.php");
 require_once("./model/typeServiceModel.php");
+require_once("./model/userModel.php");
 
 class ControllerService {
 
@@ -27,6 +28,7 @@ class ControllerService {
 	public static function createService() {
 		$services = Service::getAllServices();
 		$types_service = TypeService::getAllTypesServices();
+		$users = User::getAllUsers();
 		require_once("view/Navbar.php");
 		require("view/createService.php");
 	}
@@ -63,6 +65,13 @@ class ControllerService {
 
 		Service::updateService($id, $date_start, $date_end, $id_type_service, $price, $title);
 		self::createService();
+	}
+
+	public static function browseServices() {
+        $services = Service::getAllServices();
+
+		require_once("view/Navbar.php");
+		require_once("view/BrowseServices.php");
 	}
 }
 ?>
