@@ -1,6 +1,7 @@
 <?php 
 require_once("./model/serviceModel.php");
 require_once("./model/typeServiceModel.php");
+require_once("./model/userModel.php");
 
 class ControllerService {
 
@@ -27,6 +28,7 @@ class ControllerService {
 	public static function createService() {
 		$services = Service::getAllServices();
 		$types_service = TypeService::getAllTypesServices();
+		$users = User::getAllUsers();
 		require_once("view/Navbar.php");
 		require("view/createService.php");
 	}
