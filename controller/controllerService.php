@@ -8,7 +8,7 @@ class ControllerService {
 		/* Replace this by the list services page */
 		$services = Service::getAllServices();
 		require_once("view/Navbar.php");
-		require("index.php");
+		require("view/Homepage.php");
 	}
 
 	public static function displayService() {

@@ -1,5 +1,5 @@
 <body>
-<form id="form" action="routeur.php?controller=controllerService&action=createdService" method="POST">
+<form id="form" action="index.php?controller=controllerService&action=createdService" method="POST">
   <div class="form-group">
     <label for="dateStart">Start Date</label>
     <input type="datetime-local" class="form-control" id="dateStart" name="dateStart">
@@ -62,7 +62,7 @@
       <td>{$service->getPrice()}</td>
       <td>{$service->getIdUser()}</td>
       <td>{$service->getTitle()}</td>
-      <td><a type='button' href='routeur.php?controller=controllerService&action=deleteService&id=$id_service' class='btn btn-danger'>Supprimer</a>
+      <td><a type='button' href='index.php?controller=controllerService&action=deleteService&id=$id_service' class='btn btn-danger'>Supprimer</a>
       </td>
     </tr>
     ";
