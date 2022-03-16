@@ -1,14 +1,5 @@
-<!-- Header-->
-<header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Des Services Uniques</h1>
-            <!-- <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p> -->
-        </div>
-    </div>
-</header>
 <!-- Section-->
-<section class="py-5">
+<section style="font-family: 'Roboto Mono', monospace" class="py-5">
     <div class="container">
         <form class="form-inline" action="/recherche/" method="get">
           <fieldset>
@@ -69,7 +60,7 @@
     </div>
 </section>
 <!-- Footer-->
-<footer class="py-5 bg-dark">
+<footer style="flex:1 ; height:100%" class="py-5 bg-dark">
     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Session 2021-2022 Prism</p></div>
 </footer>
 <!-- Bootstrap core JS-->

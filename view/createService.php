@@ -9,7 +9,7 @@
     <input type="datetime-local" class="form-control" id="dateEnd" name="dateEnd">
   </div>
   <div class="form-group">
-    <label for="idTypeService">Type de Service</label>
+    <label for="idTypeService">Service Type</label>
       <select class="form-select" id="idTypeService" name="idTypeService">
           <?php foreach ($types_service as $type_service) {
             echo "<option value={$type_service->getId()}>{$type_service->getName()}</option>";
