@@ -33,7 +33,7 @@ class ControllerLogin
             $req_prep->execute($values);
             $tabResults = $req_prep->fetchAll();
         } catch (PDOException $e) {
-            echo "erreur : ".$e->getMessage()."<br>";
+            echo "erreur : " . $e->getMessage() . "<br>";
             return false;
         }
 
@@ -57,7 +57,7 @@ class ControllerLogin
 
     public static function register()
     {
-        ControllerHome::displayHome();
+        //ControllerHome::displayHome();
         Connexion::connect();
 
         $uname = $_POST['uname'];
