@@ -8,8 +8,9 @@
     <title>Cinquaine</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-	<link rel="stylesheet" href="assets/css/style.css">
-    <link href="assets/css/nav.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/bootstrap_5.1.3/bootstrap.min.css">
+    <link href="assets/css/nav.css" rel="stylesheet"/>
+	<script src="js/bootstrap_5.1.3/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
 <?php

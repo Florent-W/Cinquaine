@@ -4,6 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     Jean Eude
+                    <a href="#" class="text-reset"><i class="bi bi-gear-fill float-end"></i></a>
                 </div>
                 <div class="bg-light">
                     <div class="d-flex justify-content-center align-items-center bg-gradient" style="height: 200px; width: 100%;">
