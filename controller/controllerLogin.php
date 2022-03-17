@@ -8,6 +8,11 @@ class ControllerLogin
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
     }
+    public static function displayRegister()
+    {
+        require_once("view/Navbar.php");
+        require_once("view/RegisterForm.php");
+    }
 
     public static function login()
     {
@@ -49,15 +54,22 @@ class ControllerLogin
 
     public static function register()
     {
+        require_once("conf/Connexion.php");
         //ControllerHome::displayHome();
         Connexion::connect();
-
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
         $email = $_POST['email'];
         $phone_number = $_POST['phone_number'];
         $balance = 0;
 
-        userModel::addUser($uname, $psw, $email, $phone_number, $balance);
+        if (!empty($uname) && !empty($psw) && !empty($email) && !empty($phone_number)) {
+            user::addUser($uname, $psw, $email, $phone_number, $balance);
+            ControllerLogin::displayLogin();
+            echo " acount successfuly added little shit ! ";
+        } else {
+            ControllerLogin::displayLogin();
+            echo "empty field dumbass !";
+        }
     }
 }
