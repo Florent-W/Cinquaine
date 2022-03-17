@@ -37,21 +37,13 @@ class ControllerLogin
             return false;
         }
 
-        var_dump($tabResults);
-        die();
         if (!empty($tabResults)) {
+            $_SESSION["id"] = $tabResults->getId();
+            $_SESSION["name"] = $tabResults->getName();
             //header('location : Homepage.php');
-            $_SESSION["id"] = $tabResults[0];
-            $_SESSION["name"] = $_POST['uname'];
         } else {
-
-            $messerr = "invalid username or password litle shit";
-            echo $messerr;
-            echo $uname;
+            $messerr = "invalid username or password";
             ControllerLogin::displayLogin();
-            foreach ($tabResults as $test) {
-                echo $test;
-            }
         }
     }
 

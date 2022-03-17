@@ -93,6 +93,22 @@ class User
         return $result;
     }
 
+    public static function getUserWithPassword($id_user, $password)
+    {
+        $query = "SELECT id_user, name, password, email, phone_number, balance FROM users WHERE name = :name AND password = :password";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("name" => $id_user, "password" => $password);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'User');
+            $p_query->execute($values);
+            $result = $p_query->fetch();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
     public static function getAllUsers()
     {
         $query = "SELECT id_user, name, password, email, phone_number, balance from users";
