@@ -10,7 +10,7 @@
         <input type="email" placeholder="Enter your mail" name="email" required>
 
         <label for="phone_number"><b>Phone number</b></label>
-        <input type="tel" placeholder="Enter your phone number" name="phone_number" required>
+        <input type="tel" placeholder="0768656887" name="phone_number" pattern="[0-9]{10}" required>
 
         <button type="submit">Register</button>
         <label>
