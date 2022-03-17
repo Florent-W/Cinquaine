@@ -1,4 +1,3 @@
-<body>
 <form id="form" action="index.php?controller=controllerService&action=createdService" method="POST">
   <div class="form-group">
     <label for="dateStart">Start Date</label>
@@ -74,4 +73,3 @@
 ?>
   </tbody>
 </table>
-</body>
