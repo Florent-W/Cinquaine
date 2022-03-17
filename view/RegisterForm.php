@@ -7,14 +7,14 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
 
         <label for="psw"><b>Email</b></label>
-        <input type="password" placeholder="Enter your mail" name="email" required>
+        <input type="email" placeholder="Enter your mail" name="email" required>
 
         <label for="psw"><b>Phone number</b></label>
-        <input type="password" placeholder="Enter your phone number" name="email" required>
+        <input type="tel" placeholder="Enter your phone number" name="phone_number" required>
 
         <button type="submit">Register</button>
         <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+
         </label>
     </div>
     <div class="container" style="background-color:#f1f1f1">
