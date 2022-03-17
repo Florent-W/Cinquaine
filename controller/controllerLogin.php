@@ -23,35 +23,15 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
-        $sql = "SELECT * from users where password = :password AND name = :name";
-        $req_prep = Connexion::pdo()->prepare($sql);
-        try {
-            $values = array(
-                "password" => $psw,
-                "name" => $uname
-            );
-            $req_prep->execute($values);
-            $tabResults = $req_prep->fetchAll();
-        } catch (PDOException $e) {
-            echo "erreur : ".$e->getMessage()."<br>";
-            return false;
-        }
+        $tabResults = User::getUserWithPassword($uname, $psw);
 
-        var_dump($tabResults);
-        die();
         if (!empty($tabResults)) {
+            $_SESSION["id"] = $tabResults->getId();
+            $_SESSION["name"] = $tabResults->getName();
             //header('location : Homepage.php');
-            $_SESSION["id"] = $tabResults[0];
-            $_SESSION["name"] = $_POST['uname'];
         } else {
-
-            $messerr = "invalid username or password litle shit";
-            echo $messerr;
-            echo $uname;
+            $messerr = "invalid username or password";
             ControllerLogin::displayLogin();
-            foreach ($tabResults as $test) {
-                echo $test;
-            }
         }
     }
 
