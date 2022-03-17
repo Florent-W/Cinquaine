@@ -23,10 +23,22 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
-        $sql = "SELECT * from users where password = 'tes' AND name = 'pablo' ";
+        $sql = "SELECT * from users where password = :password AND name = :name";
         $req_prep = Connexion::pdo()->prepare($sql);
-        $tabResults = $req_prep->fetchAll();
+        try {
+            $values = array(
+                "password" => $psw,
+                "name" => $uname
+            );
+            $req_prep->execute($values);
+            $tabResults = $req_prep->fetchAll();
+        } catch (PDOException $e) {
+            echo "erreur : ".$e->getMessage()."<br>";
+            return false;
+        }
 
+        var_dump($tabResults);
+        die();
         if (!empty($tabResults)) {
             //header('location : Homepage.php');
             $_SESSION["id"] = $tabResults[0];
