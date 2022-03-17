@@ -23,7 +23,19 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
-        $tabResults = User::getUserWithPassword($uname, $psw);
+        $sql = "SELECT * from users where password = :password AND name = :name";
+        $req_prep = Connexion::pdo()->prepare($sql);
+        try {
+            $values = array(
+                "password" => $psw,
+                "name" => $uname
+            );
+            $req_prep->execute($values);
+            $tabResults = $req_prep->fetchAll();
+        } catch (PDOException $e) {
+            echo "erreur : " . $e->getMessage() . "<br>";
+            return false;
+        }
 
         if (!empty($tabResults)) {
             $_SESSION["id"] = $tabResults->getId();
@@ -37,7 +49,7 @@ class ControllerLogin
 
     public static function register()
     {
-        ControllerHome::displayHome();
+        //ControllerHome::displayHome();
         Connexion::connect();
 
         $uname = $_POST['uname'];
