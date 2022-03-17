@@ -1,4 +1,4 @@
-<nav style="font-family: 'Roboto Mono', monospace; color: #FFFFFF; padding: 20px " class="navbar narbar-dark navbar-expand-lg static-top mb-3">
+<nav style="font-family: 'Roboto Mono', monospace; padding: 20px " class="navbar navbar-dark bg-dark navbar-expand-lg static-top mb-3">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!"><img class="brand" src="assets/css/" alt="logo"></img></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
