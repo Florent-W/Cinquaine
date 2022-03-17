@@ -34,7 +34,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
 <table class="table table-hover">
   <thead>
     <tr>

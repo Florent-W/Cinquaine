@@ -1,6 +1,3 @@
-<?php
-
-?>
 <form action="index.php?action=login&controller=controllerLogin" method="post">
     <div class="container">
         <label for="uname"><b>Username</b></label>

@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 <nav style="font-family: 'Roboto Mono', monospace; background-color: #2D529C; font-color " class="navbar navbar-expand-lg static-top mb-3">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!"><img class="brand" src="assets/css/" alt="logo"></img></a>

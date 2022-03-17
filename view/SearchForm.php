@@ -1,6 +1,3 @@
-<?php
-
-?>
 <form action="view/Homepage.php" method="post">
     <div class="container">
         <label for="search"><b>Recherche</b></label>

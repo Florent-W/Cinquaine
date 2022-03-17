@@ -1,6 +1,3 @@
-<?php
-
-?>
 <form action="index.php?action=register&controller=controllerLogin" method="post">
     <div class="container">
         <label for="uname"><b>Username</b></label>
@@ -20,7 +17,6 @@
             <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
     </div>
-
     <div class="container" style="background-color:#f1f1f1">
         <span class="psw">Retour <a href="#">retour</a></span>
     </div>
