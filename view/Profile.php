@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     Jean Eude
-                    <a href="#" class="text-reset"><i class="bi bi-gear-fill float-end"></i></a>
+                    <a href="index.php?action=displaySettings" class="text-reset"><i class="bi bi-gear-fill float-end"></i></a>
                 </div>
                 <div class="bg-light">
                     <div class="d-flex justify-content-center align-items-center bg-gradient" style="height: 200px; width: 100%;">
@@ -17,39 +17,21 @@
                 </div>
             </div>
         </div>
+
+        <?php 
+            // getAllServicesByUser($id_user)
+            // foreach echo service element as seen below.
+        ?>
+
         <div class="col-sm-8 order-sm-first">
             <div class="d-flex flex-row mb-2" style="height:200px">
-                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
-                <div>
-                <h1>test</h1>
-                <h2>testing</h2>
-                <p>description</p>
+                <div class="h-100 w-sm-100 w-50" style="background-color:red; box-shadow: inset 0 0 10px 3px black"></div>
+                <div class="ms-2 position-relative">
+                    <h1>test</h1>
+                    <span class="position-absolute bottom-0">description</span>
                 </div>
             </div>
-            <div class="d-flex flex-row mb-2" style="height:200px">
-                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
-                <div>
-                <h1>test</h1>
-                <h2>testing</h2>
-                <p>description</p>
-                </div>
-            </div>
-            <div class="d-flex flex-row mb-2" style="height:200px">
-                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
-                <div>
-                <h1>test</h1>
-                <h2>testing</h2>
-                <p>description</p>
-                </div>
-            </div>
-            <div class="d-flex flex-row mb-2" style="height:200px">
-                <div class="h-100 w-sm-100 w-50" style="background-color:red;"></div>
-                <div>
-                <h1>test</h1>
-                <h2>testing</h2>
-                <p>description</p>
-                </div>
-            </div>
-        <div>
+        </div>
+
     </div>
 </div>  

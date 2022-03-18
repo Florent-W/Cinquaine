@@ -18,6 +18,13 @@ class ControllerHome
 		require_once("view/Navbar.php");
 		require_once("view/Profile.php");
 	}
+
+	public static function displaySettings()
+	{
+		require_once("view/Navbar.php");
+		require_once("view/Settings.php");
+	}
+
 	public static function displayLogin()
 	{
 		require_once("view/ConnectionForm.php");
