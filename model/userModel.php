@@ -77,11 +77,11 @@ class User
         }
     }
 
-    public static function getUser($id_user)
+    public static function getUser($username)
     {
-        $query = "SELECT id_user, name, password, email, phone_number, balance FROM users WHERE id_user = :id_user";
+        $query = "SELECT * FROM users WHERE name = :name";
         $p_query = Connexion::pdo()->prepare($query);
-        $values = array("id_user" => $id_user);
+        $values = array("name" => $username);
         $result = [];
         try {
             $p_query->setFetchMode(PDO::FETCH_CLASS, 'User');
