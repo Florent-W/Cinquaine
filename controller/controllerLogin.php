@@ -28,6 +28,8 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
+        password_verify($psw);
+
         $sql = "SELECT * from users where password = :password AND name = :name";
         $req_prep = Connexion::pdo()->prepare($sql);
         try {

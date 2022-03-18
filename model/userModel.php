@@ -128,10 +128,11 @@ class User
     {
         $query = "INSERT INTO users (name, password, email, phone_number, balance) VALUES (:name, :password, :email, :phone_number, :balance)";
         $p_query = Connexion::pdo()->prepare($query);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Need to add a hash for the password
         $values = array(
             "name" => $name,
-            "password" => $password,
+            "password" => $hashed_password,
             "email" => $email,
             "phone_number" => $phone_number,
             "balance" => $balance
