@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul style="font-size: 20px; margin-top:30px" class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul style="font-size: 18px; margin-top:30px; letter-spacing: 2px" class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-1">
                     <a class="nav-link active " aria-current="page" href="#!"><i class="bi bi-plus-circle"style="margin-right:0.5rem"></i>FR</a>
                 </li>
