@@ -59,6 +59,6 @@
         </div>
     </div>
 </section>
-<footer style="flex:1 ; height:100%" class="py-5 bg-dark">
-    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Session 2021-2022 Prism</p></div>
+<footer class="w-100 position-fixed bottom-0 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyleft &#127279; Session 2021-2022 Prism</p></div>
 </footer>
