@@ -9,6 +9,7 @@ class ControllerHome
 		$services = Service::getAllServices();
 		require_once("view/Navbar.php");
 		require_once("view/Homepage.php");
+		require_once("view/Footer.php");
 	}
 
 	public static function displayProfile()
@@ -17,12 +18,14 @@ class ControllerHome
 		//$services = Service::getAllServicesById();
 		require_once("view/Navbar.php");
 		require_once("view/Profile.php");
+		require_once("view/Footer.php");
 	}
 
 	public static function displaySettings()
 	{
 		require_once("view/Navbar.php");
 		require_once("view/Settings.php");
+		require_once("view/Footer.php");
 	}
 
 	public static function displayLogin()

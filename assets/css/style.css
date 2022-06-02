@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../../font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+
+:root {
+    --blue-color: #1F657E;
+}
+
+body {
+    font-family: "Roboto";
+    color: white;
+}
+
+.bckgroundblack {
+    background-color: black;
+}
+
+nav {
+    background-image: url("../image/navbckground.png");
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15vh;
+    color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+footer {
+    background-color: black;
+}
+
+footer .bkground {
+    padding-top: 2vh;
+    align-items: center;
+    background-image: url("../image/Footer\ Bckground.png");
+    width: 100%;
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brand {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 7px;
+}
+
+.nav-link,
+.navbar-brand {
+    color: white !important;
+}
+
+.loginform {
+    background: rgba(31, 101, 126, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    margin: 5% 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding: 7% 5%;
+}
+
+.form-group {
+    color: black;
+    margin-bottom: 5%;
+}
+
+.form-group label {
+    margin-right: 10%;
+    font-weight: lighter;
+}
+
+.form-group label,.loginform button{
+    font-size: 25px;
+}
+
+.form-group input {
+    width: 33%;
+    height: 5vh;
+}
+
+.loginform button {
+    color: white;
+    background-color: var(--blue-color);
+    padding: 1% 5%;
+}
+.loginform a{
+    text-decoration: none;
+    color: white;
+}
+.loginform a:hover{
+    text-decoration: underline;
+    color: black;
+}

@@ -1,11 +1,11 @@
 <!-- Section-->
-<section style="font-family: 'Roboto Mono', monospace" class="py-5">
+<section  class="py-5">
     <div class="container">
         <form class="form-inline" action="/recherche/" method="get">
           <fieldset>
             <div class="input-group">
               <div class="input-group-prepend">
-                <select id="oCategorie" name="oCategorie" class="form-control" style="width:200px">
+                <select id="oCategorie" name="oCategorie" class="form-control">
                   <option selected="selected" value="0">Catégorie</option>
                   <option value="1">Voyage</option>
                   <option value="5">Jeux</option>
@@ -15,7 +15,7 @@
               </div>
               <input id="oSaisie" name="oSaisie" type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="submit" style="width:200px">Recherche</button>
+              <button class="btn btn-secondary" type="submit" style="width:200px">Recherche</button>
               </div>
             </div>
           </fieldset>
@@ -29,7 +29,7 @@
                     <div class='col mb-5'>
                         <div class='card h-100'>
                             <!-- Product image-->
-                            <img class='card-img-top' src='assets/css/dessin.jpg' alt='...' />
+                            <img class='card-img-top' src='assets/image/dessin.jpg' alt='...' />
                             <!-- Product details-->
                             <div class='card-body p-4'>
                                 <div class='text-center'>
@@ -59,6 +59,8 @@
         </div>
     </div>
 </section>
-<footer class="w-100 position-fixed bottom-0 bg-dark">
+<footer class="w-100 bottom-0 bg-dark">
+  <div class="bkground">
     <div class="container"><p class="m-0 text-center text-white">Copyleft &#127279; Session 2021-2022 Prism</p></div>
+  </div>
 </footer>
