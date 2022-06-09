@@ -107,3 +107,7 @@ footer .bkground {
 h5.fw-bolder {
     color: black;
 }
+.card.h-100 {
+    border: 1px solid;
+    border-color: black;
+}
