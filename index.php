@@ -14,12 +14,20 @@
 </head>
 <body>
 <?php
-    session_start();
+
 	require_once("controller/controllerHome.php");
-	require_once("controller/controllerSearch.php");
 	require_once("controller/controllerLogin.php");
 	require_once("controller/controllerService.php");
 	require_once("controller/controllerSeeder.php");
+
+	require_once("model/userModel.php");
+
+	session_start();
+
+	if(isset($_SESSION["id"])) {
+		require_once("./model/userModel.php");
+		$user = User::getUserById($_SESSION["id"]);
+	}
 
 	if(isset($_GET['action'])) {
 		$action = $_GET['action'];

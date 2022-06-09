@@ -107,3 +107,20 @@ footer .bkground {
 h5.fw-bolder {
     color: black;
 }
+.card.h-100 {
+    border: 1px solid;
+    border-color: black;
+}
+.btnregister{
+    margin-top: 2vh;
+}
+.btnregister a:hover{
+    text-decoration: none;
+}
+.btnregister a{
+    font-size: 20px;
+}
+.connexionbtn:hover{
+    color: black;
+    text-decoration: underline;
+}

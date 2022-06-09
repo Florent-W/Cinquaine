@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `id_user` int NOT NULL,
   `title` varchar(55) NOT NULL,
   `image` varchar(255) NOT NULL,
+  `description` varchar(333) NOT NULL
   PRIMARY KEY (`id_service`),
   KEY `id_type_service_fk` (`id_type_service`),
   KEY `id_user_fk` (`id_user`)
@@ -83,9 +84,6 @@ ALTER TABLE `services`
   ADD CONSTRAINT `id_type_service_fk` FOREIGN KEY (`id_type_service`) REFERENCES `types_services` (`id_type_service`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
-
-INSERT INTO `cinquaine`.`users` (`id_user`, `name`, `password`) VALUES ('1', 'pobla', 'test');
-INSERT INTO `cinquaine`.`users` (`id_user`, `name`, `password`) VALUES ('2', 'pablito', 'escobart');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

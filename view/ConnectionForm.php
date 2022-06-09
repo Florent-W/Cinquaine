@@ -10,11 +10,12 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
         </div>
         <button class="btn" type="submit">Connexion</button>
+        <div><button class="btn btnregister"><a class="btn" href="index.php?controller=controllerLogin&action=displayRegister">Inscription</a></button></div>
         <div class="form-check">
             <input type="checkbox" checked="checked" name="remember">
             <label>Remember me</label>
         </div>
         <div class="psw"><a href="#">Forgot password?</a></div>
-        <a class="btn" href="index.php?controller=controllerLogin&action=displayRegister">Inscription</a>
+        
     </form>
 </div>
