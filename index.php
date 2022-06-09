@@ -16,6 +16,7 @@
 <?php
 
 	require_once("controller/controllerHome.php");
+	require_once("controller/controllerSearch.php");
 	require_once("controller/controllerLogin.php");
 	require_once("controller/controllerService.php");
 
