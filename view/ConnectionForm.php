@@ -15,5 +15,6 @@
             <label>Remember me</label>
         </div>
         <div class="psw"><a href="#">Forgot password?</a></div>
+        <a class="btn" href="index.php?controller=controllerLogin&action=displayRegister">Inscription</a>
     </form>
 </div>

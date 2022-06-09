@@ -27,9 +27,4 @@ class ControllerHome
 		require_once("view/Settings.php");
 		require_once("view/Footer.php");
 	}
-
-	public static function displayLogin()
-	{
-		require_once("view/ConnectionForm.php");
-	}
 }
