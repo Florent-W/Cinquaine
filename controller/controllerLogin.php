@@ -30,7 +30,7 @@ class ControllerLogin
         $uname = $_POST['uname'];
         $psw = $_POST['psw'];
 
-        $user = user::getUser($uname);
+        $user = user::getUserByUsername($uname);
 
         $up = $user->getPassword();
 
@@ -47,6 +47,15 @@ class ControllerLogin
             echo "<script>console.log ($messer);</script>";
             ControllerLogin::displayLogin();
         }
+    }
+
+    public static function logout()
+    {
+        session_destroy();
+        $logout = "Successfully disconnected";
+            echo $logout;
+            echo "<script>console.log ($logout);</script>";
+        ControllerLogin::displayLogin();
     }
 
     public static function register()
