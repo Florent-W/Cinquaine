@@ -103,3 +103,7 @@ footer .bkground {
     width: 25%;
     display: inline;
 }
+
+h5.fw-bolder {
+    color: black;
+}
