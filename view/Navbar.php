@@ -5,14 +5,14 @@
       <a class="navbar-brand" href="#">Service</a>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <?php if (true) : // TODO: Utilisateur est connecte! 
+          <?php if (isset($_SESSION["id"])) :
           ?>
             <a class="nav-link active" aria-current="page" href="#">
               <i class="bi bi-person-circle"></i>
               Mon profil
             </a>
           <?php else : ?>
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
               <i class="bi bi-box-arrow-in-right"></i>
               Se connecter
             </a>
