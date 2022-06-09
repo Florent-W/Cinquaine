@@ -38,6 +38,7 @@ class ControllerLogin
 
         //verfy passwd
         if (password_verify($psw, $up)) {
+            $messerr0 = "valid username and password";
             $_SESSION["id"] = $user->getId();
             $_SESSION["name"] = $user->getName();
             ControllerHome::displayHome();
