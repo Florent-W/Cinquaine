@@ -58,6 +58,21 @@ class Service {
         return $result;
     }
 
+    public static function getAllServicesFromUser($id_user) {
+        $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title FROM services WHERE id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
     public static function getAllServices() {
         $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title FROM services";
         $p_query = Connexion::pdo()->prepare($query);
