@@ -30,6 +30,7 @@ nav {
 
 footer {
     background-color: black;
+    position: absolute;
 }
 
 footer .bkground {
