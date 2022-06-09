@@ -1,3 +1,4 @@
+
 <div class="container">
     <form action="index.php?action=register&controller=controllerLogin" method="post" class="loginform  ">
         <div class="form-group">
@@ -11,7 +12,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email"><b>Email :</b></label>
+            <label for="email" style="margin-left: 8vh;"><b>Email :</b></label>
             <input type="email" placeholder="Enter your mail" name="email" required>
         </div>
 

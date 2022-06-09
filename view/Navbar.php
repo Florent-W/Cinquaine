@@ -24,7 +24,7 @@
               </a>
             </a>
           <?php else : ?>
-            <a class="nav-link active" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
+            <a class="nav-link active connexionbtn" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
               <i class="bi bi-box-arrow-in-right"></i>
               Se connecter
             </a>
