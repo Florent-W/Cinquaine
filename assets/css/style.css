@@ -98,3 +98,8 @@ footer .bkground {
     text-decoration: underline;
     color: black;
 }
+
+.form-select {
+    width: 25%;
+    display: inline;
+}

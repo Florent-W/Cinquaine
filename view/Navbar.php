@@ -10,6 +10,14 @@
             <a class="nav-link active" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
               <i class="bi bi-person-circle"></i>
               Mon profil
+              <a class="nav-link active" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
+                Balance :
+                <?php User::getUser($_SESSION["id"]).getBalance() ?>
+                <i class="bi bi-cash"></i>
+              </a>
+              <a class="nav-link active" aria-current="page" href="index.php?action=createService&controller=controllerService">
+                Créer un service
+              </a>
             </a>
           <?php else : ?>
             <a class="nav-link active" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
@@ -17,6 +25,7 @@
               Se connecter
             </a>
           <?php endif ?>
+
         </li>
       </ul>
     </div>
