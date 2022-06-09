@@ -36,7 +36,7 @@ class ControllerLogin
 
 
 
-
+        //verfy passwd
         if (password_verify($psw, $up)) {
             $_SESSION["id"] = $user->getId();
             $_SESSION["name"] = $user->getName();
