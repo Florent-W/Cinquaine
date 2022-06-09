@@ -22,7 +22,7 @@
                                     <div class='bi-star-fill'></div>
                                 </div>
                                 <!-- Product price-->
-                                €{$service->getPrice()}
+                                <h5 class='fw-bolder'>€{$service->getPrice()}</h5>
                             </div>
                         </div>
                         <!-- Product actions-->
