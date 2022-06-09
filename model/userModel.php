@@ -77,11 +77,27 @@ class User
         }
     }
 
-    public static function getUser($username)
+    public static function getUserByUsername($username)
     {
         $query = "SELECT * FROM users WHERE name = :name";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array("name" => $username);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'User');
+            $p_query->execute($values);
+            $result = $p_query->fetch();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
+    public static function getUserById($id_user)
+    {
+        $query = "SELECT * FROM users WHERE id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
         $result = [];
         try {
             $p_query->setFetchMode(PDO::FETCH_CLASS, 'User');
