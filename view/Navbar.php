@@ -7,7 +7,7 @@
         <li class="nav-item">
           <?php if (isset($_SESSION["id"])) :
           ?>
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
               <i class="bi bi-person-circle"></i>
               Mon profil
             </a>
