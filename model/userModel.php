@@ -180,4 +180,38 @@ class User
             return false;
         }
     }
+
+    public static function increaseBalance($id_user, $valbundle)
+    {
+        $query = "UPDATE users SET balance = balance + :val_bundle WHERE id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array(
+            "id_user" => $id_user,
+            "val_bundle" => $valbundle
+        );
+        try {
+            $p_query->execute($values);
+            return true;
+        } catch (PDOException $e) {
+            echo "erreur : " . $e->getMessage() . "<br>";
+            return false;
+        }
+    }
+
+    public static function decreaseBalance($id_user, $valbundle)
+    {
+        $query = "UPDATE users SET balance = balance - :val_bundle WHERE users.id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array(
+            "id_user" => $id_user,
+            "val_bundle" => $valbundle
+        );
+        try {
+            $p_query->execute($values);
+            return true;
+        } catch (PDOException $e) {
+            echo "erreur : " . $e->getMessage() . "<br>";
+            return false;
+        }
+    }
 }

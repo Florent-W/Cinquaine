@@ -36,14 +36,18 @@ class ControllerLogin
 
 
 
-
+        //verfy passwd
         if (password_verify($psw, $up)) {
+            $messerr0 = "valid username and password";
+            echo $messer0;
+            echo "<script>console.log ($messer0);</script>";
             $_SESSION["id"] = $user->getId();
             $_SESSION["name"] = $user->getName();
             ControllerHome::displayHome();
         } else {
             $messerr = "invalid username or password";
             echo $messerr;
+            echo "<script>console.log ($messer);</script>";
             ControllerLogin::displayLogin();
         }
     }
@@ -64,7 +68,7 @@ class ControllerLogin
             ControllerLogin::displayLogin();
             echo " acount successfuly added little shit ! ";
         } else {
-            ControllerLogin::displayLogin();
+            ControllerLogin::displayRegister();
             echo "empty field dumbass !";
         }
     }
