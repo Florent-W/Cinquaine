@@ -4,11 +4,12 @@ class controllerSeeder {
     
     public static function seedDataBase()
     {   
-        // First insert 3 users
+        // First insert 4 users
         $userDataSets = [
-            ["Jean Bon", "cochonou", 1000, "jeanbon2000@orange.fr", "+33606060606"],
-            ["Pierre Paul", "jacques", 1300, "ppj91400@gmail.com", "+33707070707"],
-            ["Calvin Yapi", "blagueurdufutur", 900, "calvin.yapi@outlook.com", "+33505050505"]
+            ["jeanbon", "cochonou", 1000, "jeanbon2000@orange.fr", "+33606060606"],
+            ["pierrepaul", "jacques", 1300, "ppj91400@gmail.com", "+33707070707"],
+            ["doralexplorateur", "jetaimebabouche", 1300, "doraexp@gmail.com", "+33699999999"],
+            ["calvin.yapi", "blagueurdufutur", 900, "calvin.yapi@outlook.com", "+33505050505"]
         ];
         
         foreach($userDataSets as $insertedDataSet) {
@@ -19,11 +20,16 @@ class controllerSeeder {
             }
         }
 
-        // Then add 3 service names
+        // Then add 8 service names
         $serviceNameDataSets = [
-            ["Jardinage"],
-            ["Bricolage"],
-            ["Informatique"]
+            ["cuisine"],
+            ["dessin"],
+            ["ecommerce"],
+            ["informatique"],
+            ["jardinage"],
+            ["jeuxvidéo"],
+            ["sport"],
+            ["voyage"]
         ];
 
         foreach($serviceNameDataSets as $insertedDataSet) {
@@ -35,22 +41,21 @@ class controllerSeeder {
         }
 
 
-        // Then add 9 Services one of each type
+        // Then add 1 Services one of each type, 2 per user
 
         // For an easier date management every service will start tomorrow and end next week
         $serviceStartDate = date("Y-m-d H:i:s", strtotime("+1 day"));
         $serviceEndDate = date("Y-m-d H:i:s", strtotime("+7 day"));
 
         $serviceDataSets = [
-            [1, 1, "Taillage de haies"],
-            [1, 1, "Planter des fleurs"],
-            [1, 1, "Arracher les mauvaises herbes"],
-            [2, 2, "Réparer un meuble"],
-            [2, 2, "Aide plomberie"],
-            [2, 2, "Changement d'ampoule"],
-            [3, 3, "Installation de logiciels"],
-            [3, 3, "Changement de système d'exploitation"],
-            [3, 3, "Nettoyage d'ordinateur"]
+            [1, 1, "Faire une paella"],
+            [2, 1, "Dessiner un chien dans un hamac"],
+            [3, 2, "Booster vos ventes sur internet"],
+            [4, 2, "Installer de logiciels"],
+            [5, 3, "Tondre la pelouse"],
+            [6, 3, "Booster votre perso dofus"],
+            [7, 4, "Faire une randonnée"],
+            [8, 4, "Co-voiturage jusqu'à Bankok"],
         ];
 
         foreach($serviceDataSets as $insertedDataSet) {
