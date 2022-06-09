@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id_user` int NOT NULL AUTO_INCREMENT,
   `name` varchar(55) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `balance` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
