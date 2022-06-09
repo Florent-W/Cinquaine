@@ -181,13 +181,13 @@ class User
         }
     }
 
-    public static function increaseBalance($id_user, $balance, $valbundle)
+    public static function increaseBalance($id_user, $valbundle)
     {
-        $query = "UPDATE users SET balance = :balance WHERE id_user = :id_user";
+        $query = "UPDATE users SET balance = balance + :val_bundle WHERE id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array(
             "id_user" => $id_user,
-            "balance" => $balance + $valbundle
+            "val_bundle" => $valbundle
         );
         try {
             $p_query->execute($values);
@@ -198,13 +198,13 @@ class User
         }
     }
 
-    public static function decreaseBalance($id_user, $balance)
+    public static function decreaseBalance($id_user, $valbundle)
     {
-        $query = "UPDATE users SET balance = balance - services.prices JOIN services ON users.id_user = services.id_user WHERE users.id_user = :id_user";
+        $query = "UPDATE users SET balance = balance - :val_bundle WHERE users.id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array(
             "id_user" => $id_user,
-            "balance" => $balance
+            "val_bundle" => $valbundle
         );
         try {
             $p_query->execute($values);
