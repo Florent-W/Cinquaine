@@ -107,12 +107,10 @@ footer .bkground {
 h5.fw-bolder {
     color: black;
 }
-<<<<<<< HEAD
 .card.h-100 {
     border: 1px solid;
     border-color: black;
 }
-=======
 .btnregister{
     margin-top: 2vh;
 }
@@ -126,4 +124,3 @@ h5.fw-bolder {
     color: black;
     text-decoration: underline;
 }
->>>>>>> 1be9e34ce6a2c876343342d734503ff7cf18cbe4
