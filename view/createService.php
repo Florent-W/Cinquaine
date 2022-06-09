@@ -1,16 +1,17 @@
-<form id="form" action="index.php?controller=controllerService&action=createdService" method="POST">
+<form id="form" action="index.php?controller=controllerService&action=createdService" method="POST" class="loginform    ">
   <div class="form-group">
     <label for="dateStart">Start Date</label>
-    <input type="datetime-local" class="form-control" id="dateStart" name="dateStart">
+    <input type="datetime-local" id="dateStart" name="dateStart">
   </div>
   <div class="form-group">
     <label for="dateEnd">End Date</label>
-    <input type="datetime-local" class="form-control" id="dateEnd" name="dateEnd">
+    <input type="datetime-local" id="dateEnd" name="dateEnd">
   </div>
   <div class="form-group">
     <label for="idTypeService">Service Type</label>
       <select class="form-select" id="idTypeService" name="idTypeService">
-          <?php foreach ($types_service as $type_service) {
+          <?php
+          foreach ($types_service as $type_service) {
             echo "<option value={$type_service->getId()}>{$type_service->getName()}</option>";
           }
           ?>
@@ -18,7 +19,7 @@
   </div>
   <div class="form-group">
     <label for="price">Price</label>
-    <input type="number" class="form-control" id="price" name="price" placeholder="Price">
+    <input type="number" id="price" name="price" placeholder="Price">
   </div>
   <div class="form-group">
     <label for="idUser">User</label>
@@ -30,7 +31,7 @@
       </select>  </div>
   <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+    <input type="text" id="title" name="title" placeholder="Title">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

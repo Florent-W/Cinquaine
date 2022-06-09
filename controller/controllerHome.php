@@ -8,6 +8,7 @@ class ControllerHome
 	{
 		$services = Service::getAllServices();
 		require_once("view/Navbar.php");
+		require_once("view/SearchForm.php");
 		require_once("view/Homepage.php");
 		require_once("view/Footer.php");
 	}
