@@ -18,7 +18,6 @@ class ControllerLogin
 
     public static function login()
     {
-        session_start();
         require_once("conf/Connexion.php");
         //ControllerHome::displayHome();
         Connexion::connect();

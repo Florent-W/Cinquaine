@@ -12,7 +12,11 @@
               Mon profil
               <a class="nav-link active" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
                 Balance :
-                <?php User::getUser($_SESSION["id"]).getBalance() ?>
+                <?php
+                     $user = User::getUserById($_SESSION["id"]);
+
+                     echo($user->getBalance());
+                 ?>
                 <i class="bi bi-cash"></i>
               </a>
               <a class="nav-link active" aria-current="page" href="index.php?action=createService&controller=controllerService">
