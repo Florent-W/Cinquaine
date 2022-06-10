@@ -1,6 +1,6 @@
 <div class="container pt-2 pb-2">
-    <div class="row text-dark">
-        <div class="col-md order-md-last mb-3">
+    <div class="row justify-content-center text-dark">
+        <div class="col-md-4 order-md-last mb-3">
             <div class="card bg-light">
                 <div class="d-flex justify-content-center align-items-center bg-gradient" style="height: 200px; width: 100%;">
                     <img src="./assets/person-circle.svg" class="card-img-top h-75 w-75">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8 order-md-first">
+        <div class="col-md-6 order-md-first">
             <div class="d-grid gap-2">
                 <?php
                 foreach ($services as $service) {
