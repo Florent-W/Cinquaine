@@ -33,6 +33,7 @@ class ControllerService {
 		$users = User::getAllUsers();
 		require_once("view/Navbar.php");
 		require("view/createService.php");
+		require_once("view/Footer.php");
 	}
 
 	public static function createdService() {
