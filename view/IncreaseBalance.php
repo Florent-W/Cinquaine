@@ -15,7 +15,7 @@
                     <ul style="list-style: none; padding: 0;">
                         <li><strong>Prix: 20€ (TTC)</strong></li>
                         <hr>
-                        <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=displayCreditCardPayment&offer=200">Acheter</a></div></li>
+                        <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=increaseBalanceDone&offer=200">Acheter</a></div></li>
                     </ul>
                 </div>
             </div>
