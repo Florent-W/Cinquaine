@@ -15,7 +15,7 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="dateStart">Date de début du service</label>
-                      <input type="datetime-local" name="dateStart" class="form-control" placeholder="" />
+                      <input type="date" name="dateStart" class="form-control" placeholder="" />
                     </div>
                   </div>
 
@@ -23,7 +23,7 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="dateEnd">Date de fin du service</label>
-                      <input type="datetime-local" name="dateEnd" class="form-control" placeholder="" />
+                      <input type="date" name="dateEnd" class="form-control" placeholder="" />
                     </div>
                   </div>
 
