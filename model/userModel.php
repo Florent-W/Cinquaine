@@ -197,6 +197,30 @@ class User
         }
     }
 
+    public static function checkEmailExist($email)
+    {
+        $query = "SELECT id_user, name, password, email, phone_number, balance FROM users WHERE email = :email";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("email" => $email);
+        $result = [];
+        $nbResult = 0;
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'User');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+            $nbResult = $p_query->rowCount();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+
+        if($nbResult > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     public static function increaseBalance($id_user, $valbundle)
     {
         $query = "UPDATE users SET balance = balance + :val_bundle WHERE id_user = :id_user";
