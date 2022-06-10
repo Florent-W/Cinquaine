@@ -99,16 +99,9 @@ footer .bkground {
     width: 33%;
     height: 5vh;
 }
-
-.loginform button {
-    color: white;
-    background-color: var(--blue-color);
-    padding: 1% 5%;
-}
 .btn{
     color: white;
     background-color: var(--blue-color);
-    padding: 1% 5%;
 }
 .loginform a{
     text-decoration: none;
