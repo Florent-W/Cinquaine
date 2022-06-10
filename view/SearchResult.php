@@ -9,7 +9,7 @@
 
             $services = Service::getAllServices();
             $filteredservices = array_filter($services, function($ser, $key) {
-                return ($ser->getIdTypeService() == $_POST["oCategorie"] && (str_contains($ser->getTitle(), $_POST["oSaisie"]) || str_contains($ser->getDescription(), $_POST["oSaisie"])));
+                return ($ser->getIdTypeService() == $_POST["oCategorie"] && (strpos($_POST["oSaisie"], $ser->getTitle()) !== false || strpos( $_POST["oSaisie"], $ser->getDescription()) !== false));
             }, ARRAY_FILTER_USE_BOTH);
 
             if(count($filteredservices) == 0) {
