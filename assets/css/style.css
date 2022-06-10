@@ -99,6 +99,7 @@ footer .bkground {
     width: 33%;
     height: 5vh;
 }
+
 .btn{
     color: white;
     background-color: var(--blue-color);
@@ -148,7 +149,7 @@ fw-bolder {
     border-color: #1F657E;
 }
 
-a {
+a{
     color: #3a5276;
     text-decoration: underline;
 }

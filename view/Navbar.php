@@ -4,6 +4,11 @@
     <ul class="navbar-nav flex-fill mb-0">
       <?php if (isset($_SESSION["id"])) : ?>
         <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">
+            Accueil
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
             <i class="bi bi-person-circle"></i>
             Mon profil
