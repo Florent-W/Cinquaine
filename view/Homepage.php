@@ -19,7 +19,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Description Modal - Title-->
-                                    <h2 class="Description-modal-title text-secondary text-uppercase mb-0">Titre ICI</h2>
+                                    <h2 class="Description-modal-title text-secondary text-uppercase mb-0"><?php echo $service->getTitle(); ?></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -28,7 +28,7 @@
                                     <!-- Description Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="Image_ICI" alt="..." />
                                     <!-- Description Modal - Text-->
-                                    <p class="mb-4">Insérer la description ICI</p>
+                                    <p class="mb-4"><?php echo $service->getDescription(); ?></p>
                                 </div>
                             </div>
                         </div>
