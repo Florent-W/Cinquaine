@@ -73,12 +73,19 @@ class ControllerLogin
         $balance = 0;
 
         if (!empty($uname) && !empty($psw) && !empty($email) && !empty($phone_number)) {
+            if(user::checkEmailExist($email)){
+                echo " Email déjà utilisée! ";
+                ControllerLogin::displayRegister();
+            }
+            else{
             user::addUser($uname, $psw, $email, $phone_number, $balance);
-            ControllerLogin::displayLogin();
             echo " Compte créé avec succès! ";
-        } else {
-            ControllerLogin::displayRegister();
+            ControllerLogin::displayLogin();
+            }
+        } 
+        else {
             echo "Champ(s) vide(s)!";
+            ControllerLogin::displayRegister();
         }
     }
 }
