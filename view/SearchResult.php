@@ -9,8 +9,7 @@
 
             $services = Service::getAllServices();
             $filteredservices = array_filter($services, function($ser, $key) {
-                // TODO : Rajouter un str_contains qui regarde si la saisie est dans la description également
-                return ($ser->getIdTypeService() == $_POST["oCategorie"] && str_contains($ser->getTitle(), $_POST["oSaisie"]));
+                return ($ser->getIdTypeService() == $_POST["oCategorie"] && (str_contains($ser->getTitle(), $_POST["oSaisie"]) || str_contains($ser->getDescription(), $_POST["oSaisie"])));
             }, ARRAY_FILTER_USE_BOTH);
 
             if(count($filteredservices) == 0) {
@@ -27,7 +26,7 @@
                             <div class='col-md-8'>
                               <div class='card-body'>
                                 <h5 class='card-title fw-bolder'>".$service->getTitle()."</h5>
-                                <p class='card-text force-black'>.TODO Mettre la descrption ici.</p>
+                                <p class='card-text force-black'>".$service->getDescription()."</p>
                                 <p class='card-text'><small class='text-muted'>".$service->getDateStart()."</small></p>
                               </div>
                             </div>
