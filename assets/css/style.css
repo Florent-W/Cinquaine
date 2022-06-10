@@ -89,7 +89,6 @@ footer .bkground {
 }
 
 .form-group label {
-    margin-right: 10%;
     font-weight: lighter;
 }
 
@@ -130,7 +129,7 @@ fw-bolder {
     border-color: black;
 }
 .btnregister{
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 .btnregister a:hover{
     text-decoration: none;
