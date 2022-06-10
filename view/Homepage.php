@@ -14,14 +14,6 @@
                             <div class='text-center'>
                                 <!-- Product name-->
                                 <h5 class='fw-bolder'>{$service->getTitle()}</h5>
-                                <!-- Product reviews-->
-                                <div class='d-flex justify-content-center small text-warning mb-2'>
-                                    <div class='bi-star-fill'></div>
-                                    <div class='bi-star-fill'></div>
-                                    <div class='bi-star-fill'></div>
-                                    <div class='bi-star-fill'></div>
-                                    <div class='bi-star-fill'></div>
-                                </div>
                                 <!-- Product price-->
                                 <h5 class='fw-bolder'>€{$service->getPrice()}</h5>
                             </div>
