@@ -19,6 +19,7 @@
 	require_once("controller/controllerLogin.php");
 	require_once("controller/controllerService.php");
 	require_once("controller/controllerSeeder.php");
+	require_once("controller/controllerSearch.php");
 
 	require_once("model/userModel.php");
 
