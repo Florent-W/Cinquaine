@@ -2,16 +2,6 @@
     <div class="row text-dark">
         <div class="col-md order-md-last mb-3">
             <div class="card bg-light">
-                <div class="card-header">
-                    <?php if (isset($_SESSION["id"])) : ?>
-                        <a href="index.php?controller=controllerLogin&action=logout" class="text-reset">
-                            <div class="float-end">
-                                <i class="bi bi-box-arrow-in-left"></i>
-                                Me déconnecter
-                            </div>
-                        </a>
-                    <?php endif ?>
-                </div>
                 <div class="d-flex justify-content-center align-items-center bg-gradient" style="height: 200px; width: 100%;">
                     <img src="./assets/person-circle.svg" class="card-img-top h-75 w-75">
                 </div>
