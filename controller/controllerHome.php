@@ -48,9 +48,7 @@ class ControllerHome
 			$id  = $_SESSION['id'];
 			$valbundle = $_GET['offer'];
 			User::increaseBalance($id, $valbundle);
-			require_once("view/Navbar.php");
-			require_once("view/Homepage.php");
-			require_once("view/Footer.php");
+			ControllerHome::displayHome();
 		}
 		else {
 			require_once("view/Navbar.php");
