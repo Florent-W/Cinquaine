@@ -42,7 +42,7 @@ class ControllerHome
 		require_once("view/Footer.php");
 	}
 
-	public static function IncreaseBalancedone()
+	public static function increaseBalanceDone()
 	{
 		if(!empty($_SESSION['id']) && !empty($_GET['offer'])){
 			$id  = $_SESSION['id'];
@@ -55,7 +55,7 @@ class ControllerHome
 		else {
 			require_once("view/Navbar.php");
 			echo "Echec de la transaction";
-			require_once("view/CCPayment.php");
+			require_once("view/IncreaseBalance.php");
 			require_once("view/Footer.php");
 		}
 	}
