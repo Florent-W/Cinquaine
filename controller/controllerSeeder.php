@@ -49,13 +49,29 @@ class controllerSeeder {
 
         $serviceDataSets = [
             [1, 1, "Faire une paella"],
+            [1, 1, "Apprendre à préparer une tarte aux fruits"],
+            [1, 1, "Venez manger un curry chez moi"],
             [2, 1, "Dessiner un chien dans un hamac"],
+            [2, 1, "Faire des traits droits"],
+            [2, 1, "Dessiner des extraterrestres"],
             [3, 2, "Booster vos ventes sur internet"],
-            [4, 2, "Installer de logiciels"],
+            [3, 2, "Créer un site Shopify"],
+            [3, 2, "Faire du marketing digital avec Instagram"],
+            [4, 2, "Installation de logiciels"],
+            [4, 2, "Formattage de disque dur"],
+            [4, 2, "Cours d'informatique"],
             [5, 3, "Tondre la pelouse"],
+            [5, 3, "Avoir une allée fleurie"],
+            [5, 3, "Potager dans votre jardin"],
             [6, 3, "Booster votre perso dofus"],
+            [6, 3, "Coach League of Legends - 2H"],
+            [6, 3, "Apprendre à jouer à Tetris"],
             [7, 4, "Faire une randonnée"],
+            [7, 4, "Le tennis pour les nuls"],
+            [7, 4, "Allons à la piscine"],
             [8, 4, "Co-voiturage jusqu'à Bankok"],
+            [8, 4, "Comment faire du stop partout ?"],
+            [8, 4, "Tutoriel camping sauvage"]
         ];
 
         foreach($serviceDataSets as $insertedDataSet) {
