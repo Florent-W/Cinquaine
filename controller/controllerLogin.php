@@ -41,9 +41,10 @@ class ControllerLogin
             $_SESSION["name"] = $user->getName();
             ControllerHome::displayHome();
         } else {
-            $messerr = "invalid username or password";
+            /*$messerr = "invalid username or password";
             echo $messerr;
-            echo "<script>console.log ($messer);</script>";
+            echo "<script>console.log ($messer);</script>";*/
+            echo "invalid username or password";
             ControllerLogin::displayLogin();
         }
     }

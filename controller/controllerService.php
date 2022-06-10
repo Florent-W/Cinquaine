@@ -3,6 +3,8 @@ require_once("./model/serviceModel.php");
 require_once("./model/typeServiceModel.php");
 require_once("./model/userModel.php");
 
+require_once("./controller/controllerHome.php");
+
 class ControllerService {
 
 	public static function displayServices() {
@@ -34,18 +36,18 @@ class ControllerService {
 	}
 
 	public static function createdService() {
-		if(!empty($_POST['dateStart']) && !empty($_POST['dateEnd']) && !empty($_POST['idTypeService']) && !empty($_POST['price']) && !empty($_POST['idUser']) && !empty($_POST['title'])) {
+        if(!empty($_POST['dateStart']) && !empty($_POST['dateEnd']) && !empty($_POST['idTypeService']) && !empty($_POST['price']) && !empty($_SESSION['id']) && !empty($_POST['title']) && !empty($_POST['description'])) {
 			$dateStart = date("Y-m-d H:i:s", strtotime($_POST['dateStart']));
 			$dateEnd = date("Y-m-d H:i:s", strtotime($_POST['dateEnd']));
 			$idTypeService = $_POST['idTypeService'];
 			$price = $_POST['price'];
-			$idUser = $_POST['idUser'];
+			$idUser = $_SESSION['id'];
 			$title = $_POST['title'];
-		
-			Service::addService($dateStart, $dateEnd, $idTypeService, $price, $idUser, $title);
-		}
+            $description = $_POST['description'];
 
-		self::createService();
+            Service::addService($dateStart, $dateEnd, $idTypeService, $price, $idUser, $title, $description);
+		}
+        ControllerHome::displayProfile();
 	}
 
 	public static function updateService() {

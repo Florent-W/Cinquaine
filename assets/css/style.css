@@ -9,7 +9,7 @@
 
 body {
     font-family: "Roboto";
-    color: white;
+    color: black;
 }
 
 .bckgroundblack {
@@ -104,9 +104,10 @@ footer .bkground {
     display: inline;
 }
 
-h5.fw-bolder {
+fw-bolder {
     color: black;
 }
+
 .card.h-100 {
     border: 1px solid;
     border-color: black;
@@ -123,4 +124,8 @@ h5.fw-bolder {
 .connexionbtn:hover{
     color: black;
     text-decoration: underline;
+}
+
+.force-black {
+    color: black;
 }
