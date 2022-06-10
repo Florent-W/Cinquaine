@@ -15,7 +15,7 @@
             <input type="checkbox" checked="checked" name="remember">
             <label>Se souvenir de moi</label>
         </div>
-        <div class="psw"><a href="#">Forgot password?</a></div>
+        <div class="psw"><a href="#">Mot de passe oublié?</a></div>
         
     </form>
 </div>
