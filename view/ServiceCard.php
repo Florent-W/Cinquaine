@@ -34,7 +34,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
     </div>
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
         <?php if($_SESSION["id"] == $service->getIdUser()): ?>
-        <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="./index.html?controller=controllerHome&action=deleteService">Supprimer</a></div>
+        <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.html?controller=controllerHome&action=deleteService">Supprimer</a></div>
         <?php else: ?>
         <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Acheter</a></div>
         <?php endif ?>
