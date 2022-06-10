@@ -15,8 +15,7 @@ class ControllerHome
 
 	public static function displayProfile()
 	{
-		//TODO
-		//$services = Service::getAllServicesById();
+		$services = Service::getAllServicesFromUser($_SESSION["id"]);
 		require_once("view/Navbar.php");
 		require_once("view/Profile.php");
 		require_once("view/Footer.php");

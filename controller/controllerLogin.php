@@ -31,9 +31,12 @@ class ControllerLogin
 
         $user = user::getUserByUsername($uname);
 
+        if(!empty($user)){
         $up = $user->getPassword();
-
-
+        }
+        else{
+         $up = '';   
+        }
 
         //verfy passwd
         if (password_verify($psw, $up)) {
@@ -41,9 +44,10 @@ class ControllerLogin
             $_SESSION["name"] = $user->getName();
             ControllerHome::displayHome();
         } else {
-            $messerr = "invalid username or password";
+            /*$messerr = "invalid username or password";
             echo $messerr;
-            echo "<script>console.log ($messer);</script>";
+            echo "<script>console.log ($messer);</script>";*/
+            echo "Mot de passe et/ou login invalide(s)";
             ControllerLogin::displayLogin();
         }
     }
@@ -51,7 +55,7 @@ class ControllerLogin
     public static function logout()
     {
         session_destroy();
-        $logout = "Successfully disconnected";
+        $logout = "Déconnecté avec succès";
             echo $logout;
             echo "<script>console.log ($logout);</script>";
         ControllerLogin::displayLogin();
@@ -71,10 +75,10 @@ class ControllerLogin
         if (!empty($uname) && !empty($psw) && !empty($email) && !empty($phone_number)) {
             user::addUser($uname, $psw, $email, $phone_number, $balance);
             ControllerLogin::displayLogin();
-            echo " acount successfuly added! ";
+            echo " Compte créé avec succès! ";
         } else {
             ControllerLogin::displayRegister();
-            echo "empty field!";
+            echo "Champ(s) vide(s)!";
         }
     }
 }
