@@ -5,7 +5,8 @@
             foreach($services as $service) {
               echo "
                 <div class='col mb-5'>
-                    <div class='card h-100' data-bs-toggle='modal' data-bs-target='#DescriptionModal'>
+                    <div class='card h-100'>
+                        <div class='espaceformodal' data-bs-toggle='modal' data-bs-target='#DescriptionModal'>
                         <!-- Product image-->
                         <img class='card-img-top' src='assets/image/dessin.jpg' alt='...' />
                         <!-- Product details-->
@@ -24,6 +25,7 @@
                                 <!-- Product price-->
                                 <h5 class='fw-bolder'>€{$service->getPrice()}</h5>
                             </div>
+                        </div>
                         </div>
                         <!-- Product actions-->
                         <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
@@ -54,11 +56,7 @@
                                     <!-- Description Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="Image_ICI" alt="..." />
                                     <!-- Description Modal - Text-->
-                                    <p class="mb-4">Ce projet a pour objectif d'être déployé dans les hôpitaux français et selon le succès peut être à l'international.
-                                    </p>
-                                        Mon travail consisté a créé deux interfaces web en python ainsi qu'une base de donné, la première interface permettra de visualiser des données, 
-                                        la deuxième interface est pour la sonde.
-                                    </p>
+                                    <p class="mb-4">Insérer la description ICI</p>
                                 </div>
                             </div>
                         </div>
