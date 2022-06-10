@@ -1,5 +1,5 @@
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
+<section style="background-color: #eee; padding: 50px">
+  <div class="container">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
         <div class="card text-black" style="border-radius: 25px; background: rgba(31, 101, 126, 0.4);">
@@ -42,6 +42,15 @@
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-3">
+                          <label for="Image" class="form-label">Votre image descriptif</label>
+                          <input class="form-control" type="file" id="formFile" onchange="preview()">
+                          <img id="frame" src="" class="img-fluid rounded" style="margin-top:20px" />
+                      </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="price">Prix</label>
@@ -76,4 +85,9 @@
       </div>
     </div>
   </div>
+  <script>
+      function preview() {
+          frame.src = URL.createObjectURL(event.target.files[0]);
+      }
+  </script>
 </section>
