@@ -27,4 +27,18 @@ class ControllerHome
 		require_once("view/Settings.php");
 		require_once("view/Footer.php");
 	}
+
+	public static function displayIncreaseBalance() 
+	{
+		require_once("view/Navbar.php");
+		require_once("view/IncreaseBalance.php");
+		require_once("view/Footer.php");
+	}
+
+	public static function displayCreditCardPayment() 
+	{
+		require_once("view/Navbar.php");
+		require_once("view/CCPayment.php");
+		require_once("view/Footer.php");
+	}
 }
