@@ -82,7 +82,6 @@ footer .bkground {
     margin-left: 10%;
     padding: 7% 5%;
 }
-
 .form-group {
     color: black;
     margin-bottom: 5%;
@@ -102,6 +101,11 @@ footer .bkground {
 }
 
 .loginform button {
+    color: white;
+    background-color: var(--blue-color);
+    padding: 1% 5%;
+}
+.btn{
     color: white;
     background-color: var(--blue-color);
     padding: 1% 5%;
@@ -144,4 +148,14 @@ fw-bolder {
 
 .force-black {
     color: black;
+}
+
+.form-check-input:checked {
+    background-color: #1F657E;
+    border-color: #1F657E;
+}
+
+a {
+    color: #3a5276;
+    text-decoration: underline;
 }
