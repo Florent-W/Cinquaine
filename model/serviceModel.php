@@ -21,7 +21,7 @@ class Service {
     public function getPrice() {return $this->price;}
 	public function getIdUser() {return $this->id_user;}
     public function getTitle() {return $this->title;}
-    public function getDescription() {return $this->title;}
+    public function getDescription() {return $this->description;}
 
     // Setter of a service
     public function setId($id_service) {$this->id_service = $id_service;}
@@ -31,7 +31,7 @@ class Service {
     public function setPrice($price) {$this->price = $price;}
     public function setIdUser($id_user) {$this->id_user = $id_user;}
     public function setTitle($title) {$this->title = $title;}
-    public function setDescription($title) {$this->title = $title;}
+    public function setDescription($description) {$this->description = $description;}
 
     // Constructor of a service
     public function __construct($id_service = NULL, $date_start = NULL, $date_end = NULL, $id_type_service = NULL, $price = NULL, $id_user = NULL, $title = NULL, $description = NULL) {
