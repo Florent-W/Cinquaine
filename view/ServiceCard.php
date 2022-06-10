@@ -19,10 +19,16 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 echo $service->getTitle();
             ?>
             </h5>
+            <p>
+            <?php
+                echo $service->getDescription();
+            ?>
+            </p>
             <span>
             <?php
                 echo $service->getPrice();
             ?>
+            <i class="bi bi-cash"></i>
             </span>
         </div>
     </div>
