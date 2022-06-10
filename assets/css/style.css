@@ -28,6 +28,15 @@ nav {
     padding-right: 1vw;
 }
 
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+.brand {
+    position: absolute;
+}
+
 footer {
     background-color: black;
 }
@@ -47,6 +56,14 @@ footer .bkground {
     height: 70px;
     position: relative;
     top: 7px;
+}
+.nav {
+    position:absolute;
+    bottom:0;
+}
+.brandlogo {
+    width: 60%;
+    transform: translate(35%, 0); /*Add this*/
 }
 
 .nav-link,
