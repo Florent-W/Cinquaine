@@ -50,12 +50,12 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="Description-modal-title text-secondary text-uppercase mb-0"><?php echo $service->getTitle() ?></h2>
+                            <h2 class="Description-modal-title text-secondary text-uppercase mb-3"><?php echo $service->getTitle() ?></h2>
                             <div class="divider-custom">
                                 <div class="divider-custom-line"></div>
                                 <div class="divider-custom-line"></div>
                             </div>
-                            <img class="img-fluid rounded mb-5" src="Image_ICI" alt="..." />
+                            <img class="img-fluid rounded mb-5" src="<?php echo $imgSrc; ?>" alt="..." />
                             <p class="mb-4"><?php echo $service->getDescription() ?></p>
                         </div>
                     </div>
