@@ -24,14 +24,19 @@
                                 }
                             }
                         ?>
-                        <!--
-                        <option selected="selected"  value="2">Jeux</option>
-                        <option value="3">Loisir</option>
-                        <option value="4">Informatique</option>
-                        -->
                     </select>
                     </div>
-                    <input id="oSaisie" name="oSaisie" <?php if(isset($_POST["oSaisie"])) {echo "value=".$_POST["oSaisie"];} ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
+                    <input id="oSaisie" name="oSaisie"
+                    <?php
+                    if(isset($_POST["oSaisie"]))
+                    {
+                        $saisie = htmlspecialchars($_POST["oSaisie"]);
+
+                        echo " value='";
+                        echo $saisie;
+                        echo "'";
+                    }
+                    ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
                     <div class="input-group-append">
                     <button class="btn btn-secondary" type="submit" style="width:200px">Recherche</button>
                     </div>

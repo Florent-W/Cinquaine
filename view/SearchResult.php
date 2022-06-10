@@ -7,8 +7,8 @@
     $services = Service::getAllServices();
     $filteredservices = array_filter($services, function ($ser) use ($saisie, $categorie) {
       return ($ser->getIdTypeService() == $categorie &&
-        (strpos($saisie, $ser->getTitle()) !== false ||
-          strpos($_POST["oSaisie"], $ser->getDescription()) !== false)
+        (strpos(strval($ser->getTitle()), strval($saisie))  !== false ||
+          strpos(strval($ser->getDescription()), strval($saisie)) !== false)
       );
     });
     echo "</pre>";
