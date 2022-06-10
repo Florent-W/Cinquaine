@@ -31,7 +31,6 @@
         <div class="col-md-8 order-md-first">
             <div class="d-grid gap-2">
                 <?php
-                $services = Service::getAllServicesFromUser($_SESSION["id"]);
                 foreach ($services as $service) {
                     require("ServiceCard.php");
                 }
