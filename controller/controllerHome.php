@@ -41,4 +41,22 @@ class ControllerHome
 		require_once("view/CCPayment.php");
 		require_once("view/Footer.php");
 	}
+
+	public static function IncreaseBalancedone()
+	{
+		if(!empty($_SESSION['id']) && !empty($_GET['offer'])){
+			$id  = $_SESSION['id'];
+			$valbundle = $_GET['offer'];
+			increaseBalance($id, $valbundle);
+			require_once("view/Navbar.php");
+			require_once("view/Homepage.php");
+			require_once("view/Footer.php");
+		}
+		else {
+			require_once("view/Navbar.php");
+			echo "Echec de la transaction";
+			require_once("view/CCPayment.php");
+			require_once("view/Footer.php");
+		}
+	}
 }
