@@ -40,7 +40,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
             <?php endif ?>
         </div>
     </div>
-    <img class="card-img-top" src="<?php echo $imgSrc; ?>" style="object-fit: cover; height: 60%;" />
+    <img class="card-img-top" src="<?php echo $imgSrc; ?>" style="object-fit: cover;" />
 </div>
 <div class="Description-modal modal fade" id="<?php echo $modelaId ?>" tabindex="-1">
     <div class="modal-dialog modal-xl">
