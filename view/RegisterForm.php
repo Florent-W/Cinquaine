@@ -35,7 +35,7 @@
                     </div>
                   </div>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
+                  <div class="d-flex flex-row align-items-center mb-5">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="phone_number">Votre numéro de téléphone</label>
@@ -44,7 +44,7 @@
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button class="btn btn-primary"  type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+                    <button class="btn btn-primary btn-lg"  type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
                   </div>
 
                 </form>
