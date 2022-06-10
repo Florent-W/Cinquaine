@@ -1,7 +1,10 @@
 <section  class="py-5">
-    <form action="index.php?controller=ControllerSearch&action=displaySearch" method="post">
+    <form action="index.php?controller=ControllerSearch&action=displaySearch" method="get">
         <div class="container">
             <form class="form-inline" action="/recherche/" method="get">
+                <input type="hidden" name="controller" value="ControllerSearch">
+                <input type="hidden" name="action" value="displaySearch">
+
                 <fieldset>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -26,19 +29,19 @@
                         ?>
                     </select>
                     </div>
-                    <input id="oSaisie" name="oSaisie"
-                    <?php
-                    if(isset($_POST["oSaisie"]))
-                    {
-                        $saisie = htmlspecialchars($_POST["oSaisie"]);
+                        <input id="oSaisie" name="oSaisie"
+                        <?php
+                        if(isset($_POST["oSaisie"]))
+                        {
+                            $saisie = htmlspecialchars($_POST["oSaisie"]);
 
-                        echo " value='";
-                        echo $saisie;
-                        echo "'";
-                    }
-                    ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
-                    <div class="input-group-append">
-                    <button class="btn btn-secondary" type="submit" style="width:200px">Recherche</button>
+                            echo " value='";
+                            echo $saisie;
+                            echo "'";
+                        }
+                        ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
+                        <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit" style="width:200px">Recherche</button>
                     </div>
                 </div>
                 </fieldset>
