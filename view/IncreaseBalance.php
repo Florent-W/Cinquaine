@@ -35,7 +35,7 @@
                     <ul style="list-style: none; padding: 0;">
                         <li><strong>Prix: 40€ (TTC)</strong></li>
                         <hr>
-                        <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=displayCreditCardPayment&offer=500">Acheter</a></div></li>
+                        <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=increaseBalanceDone&offer=500">Acheter</a></div></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         <ul style="list-style: none; padding: 0;">
                             <li><strong>Prix: 70€ (TTC)</strong></li>
                             <hr>
-                            <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=displayCreditCardPayment&offer=1000">Acheter</a></div></li>
+                            <li><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?controller=controllerHome&action=increaseBalanceDone&offer=1000">Acheter</a></div></li>
                         </ul>
                     </div>
                 </div>
