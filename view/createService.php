@@ -1,3 +1,8 @@
+<style>
+    .nav-item:nth-child(4){
+        background: rgba(31, 101, 126, 0.6);
+    }
+</style>
 <section style="background-color: #eee; padding: 50px">
   <div class="container">
     <div class="row d-flex justify-content-center align-items-center h-100">

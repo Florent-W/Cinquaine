@@ -1,5 +1,10 @@
+<style>
+    .nav-item:nth-child(2){
+        background: rgba(31, 101, 126, 0.6);
+    }
+</style>
 <div class="container pt-2 pb-2">
-    <div class="row justify-content-center text-dark">
+    <div class="row justify-content-center text-dark formprofil">
         <div class="col-md-4 order-md-last mb-3">
             <div class="card bg-light">
                 <div class="d-flex justify-content-center align-items-center bg-gradient" style="height: 200px; width: 100%;">

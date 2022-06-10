@@ -1,3 +1,8 @@
+<style>
+    .nav-item:nth-child(1){
+        background: rgba(31, 101, 126, 0.6);
+    }
+</style>
 <section  class="py-5">
     <form action="index.php?controller=ControllerSearch&action=displaySearch" method="get">
         <div class="container">
