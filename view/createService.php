@@ -1,14 +1,15 @@
-<form id="form" action="index.php?controller=controllerService&action=createdService" method="POST" class="loginform    ">
+<form id="form" action="index.php?controller=controllerService&action=createdService" method="POST"
+      class="loginform    " xmlns="http://www.w3.org/1999/html">
   <div class="form-group">
-    <label for="dateStart">Start Date</label>
+    <label for="dateStart">Date de début du service</label>
     <input type="datetime-local" id="dateStart" name="dateStart">
   </div>
   <div class="form-group">
-    <label for="dateEnd">End Date</label>
+    <label for="dateEnd">Date de fin du service</label>
     <input type="datetime-local" id="dateEnd" name="dateEnd">
   </div>
   <div class="form-group">
-    <label for="idTypeService">Service Type</label>
+    <label for="idTypeService">Type du service</label>
       <select class="form-select" id="idTypeService" name="idTypeService">
           <?php
           foreach ($types_service as $type_service) {
@@ -18,34 +19,30 @@
       </select>
   </div>
   <div class="form-group">
-    <label for="price">Price</label>
-    <input type="number" id="price" name="price" placeholder="Price">
+    <label for="price">Prix</label>
+    <input type="number" id="price" name="price" placeholder="Prix">
   </div>
   <div class="form-group">
-    <label for="idUser">User</label>
-      <select class="form-select" id="idUser" name="idUser">
-          <?php foreach ($users as $user) {
-              echo "<option value={$user->getId()}>{$user->getName()}</option>";
-          }
-          ?>
-      </select>  </div>
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title" placeholder="Title">
+    <label for="title">Titre</label>
+    <input type="text" id="title" name="title" placeholder="Titre">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea type="text" maxlength="333" rows="3" cols="50" id="description" name="description" placeholder="Description"></textarea>
+    </div>
+  <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">id</th>
-      <th scope="col">date_start</th>
-      <th scope="col">date_end</th>
+      <th scope="col">Date de début</th>
+      <th scope="col">Date de fin</th>
       <th scope="col">id_type_service</th>
-      <th scope="col">price</th>
-      <th scope="col">id_user</th>
-      <th scope="col">title</th>
+      <th scope="col">Prix</th>
+      <th scope="col">id utilisateur</th>
+      <th scope="col">Titre</th>
       <th scope="col">Supprimer</th>
     </tr>
   </thead>

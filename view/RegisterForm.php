@@ -2,12 +2,12 @@
 <div class="container">
     <form action="index.php?action=register&controller=controllerLogin" method="post" class="loginform  ">
         <div class="form-group">
-            <label for="uname"><b>Username :</b></label>
+            <label for="uname"><b>Login :</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
         </div>
 
         <div class="form-group">
-            <label for="psw"><b>Password :</b></label>
+            <label for="psw"><b>Mot de passe :</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
         </div>
 
