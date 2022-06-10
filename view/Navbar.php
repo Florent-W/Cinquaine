@@ -10,7 +10,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php?action=displayProfile&controller=controllerHome">
+          <a class="nav-link" aria-current="page" href="index.php?action=displayIncreaseBalance&controller=controllerHome">
             Balance :
             <?php
             $user = User::getUserById($_SESSION["id"]);
