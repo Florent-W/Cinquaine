@@ -77,6 +77,21 @@ class Service {
         return $result;
     }
 
+    public static function getAllServicesFromUserAvailable($id_user) {
+        $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title, description FROM services WHERE id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
     public static function getAllServices() {
         $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title, description FROM services";
         $p_query = Connexion::pdo()->prepare($query);
@@ -110,6 +125,22 @@ class Service {
 			echo "erreur : ".$e->getMessage()."<br>";
 			return false;
 		}
+    }
+
+    public static function addBuyer($id_service, $id_user) {
+        $query = "INSERT INTO service_acheteurs (id_user, id_service) VALUES (:id_user, :id_service)";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array(
+            "id_service" => $id_service,
+            "id_user" => $id_user
+        );
+        try {
+            $p_query->execute($values);
+            return true;
+        } catch (PDOException $e) {
+            echo "erreur : ".$e->getMessage()."<br>";
+            return false;
+        }
     }
 
     public static function deleteServiceById($id_service) {
