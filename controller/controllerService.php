@@ -56,6 +56,39 @@ class ControllerService {
 		require("view/update.php"); 
 	}
 
+    public static function buyService() {
+      if(!empty($_GET['id']) && $_SESSION['id']) {
+            $id_service = $_GET['id'];
+            $id_user = $_SESSION['id'];
+
+            $user = User::getUserById($id_user);
+            $balance = $user->getBalance();
+
+            $service = Service::getService($id_service);
+            $price_service = $service->getPrice();
+
+            if($balance >= $price_service) {
+                User::decreaseBalance($id_user, $price_service);
+                $balance = $user->getBalance();
+
+                $id_seller = $service->getIdUser();
+                $seller = User::getUserById($id_seller);
+
+                $balance_seller = $seller->getBalance();
+
+                User::increaseBalance($id_seller, $price_service);
+
+                Service::addBuyer($id_service, $id_user);
+            }
+            else {
+                echo 'Vous êtes trop pauvre pour acheter ce service';
+            }
+      }
+        else {
+            echo 'Vous n\'êtes pas connecté et/ou ce service n\'existe pas.';
+        }
+    }
+
 	public static function updatedService() {
 		$id = $_GET["id"];
         $date_start = $_GET["date_start"];
