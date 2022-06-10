@@ -78,6 +78,20 @@ CREATE TABLE IF NOT EXISTS `services` (
   KEY `id_user_fk` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `service_acheteurs`
+--
+
+DROP TABLE IF EXISTS `service_acheteurs`;
+CREATE TABLE IF NOT EXISTS `service_acheteurs` (
+  KEY `id_type_service_fk` (`id_service`),
+  KEY `id_user_fk` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
 --
 -- Contraintes pour les tables déchargées
 --
