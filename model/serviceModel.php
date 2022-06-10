@@ -127,7 +127,7 @@ class Service {
 		}
     }
 
-    public static function buyService($id_service, $id_user) {
+    public static function addBuyer($id_service, $id_user) {
         $query = "INSERT INTO service_acheteurs (id_user, id_service) VALUES (:id_user, :id_service)";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array(
