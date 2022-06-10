@@ -69,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `price` decimal(10,2) NOT NULL,
   `id_user` int NOT NULL,
   `title` varchar(55) NOT NULL,
+  `description` varchar(333) NOT NULL,
   -- In comment because does not correspond to actual project
   -- `image` varchar(255) NOT NULL,
   -- `description` varchar(333) NOT NULL
