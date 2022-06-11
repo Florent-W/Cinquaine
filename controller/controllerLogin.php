@@ -3,7 +3,7 @@
 class ControllerLogin
 {
 
-    public static function displayLogin($messageErreur = NULL)
+    public static function displayLogin($message = NULL, $isError = false)
     {
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
@@ -53,6 +53,7 @@ class ControllerLogin
 
     public static function logout()
     {
+        session_start();
         session_destroy();
         $logout = "Déconnecté avec succès";
         ControllerLogin::displayLogin($logout);
