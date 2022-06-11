@@ -82,8 +82,9 @@ class ControllerService {
                 Service::addBuyer($id_service, $id_user);
             }
             else {
-                echo 'Vous êtes trop pauvre pour acheter ce service';
+                echo 'Vous n\'avez pas assez d\'argent pour acheter ce service';
             }
+            ControllerHome::displayHome();
       }
         else {
             echo 'Vous n\'êtes pas connecté et/ou ce service n\'existe pas.';
