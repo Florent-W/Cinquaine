@@ -62,7 +62,7 @@ class ControllerService {
     }
 
     public static function buyService() {
-      if(!empty($_GET['id']) && $_SESSION['id']) {
+      if(!empty($_GET['id']) && !empty($_SESSION['id'])) {
             $id_service = $_GET['id'];
             $id_user = $_SESSION['id'];
 

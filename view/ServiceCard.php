@@ -78,7 +78,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
         <div class="modal-content">
             <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"></button></div>
             <div class="modal-body text-center pb-5">
-                <form class="mx-1 mx-md-4" action="index.php?action=buyService&Id=<?php echo $service->getId();?>controller=controllerService" method="post" >
+                <form class="mx-1 mx-md-4" action="index.php?action=buyService&id=<?php echo $service->getId();?>&controller=controllerService" method="post" >
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
