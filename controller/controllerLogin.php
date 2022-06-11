@@ -47,7 +47,7 @@ class ControllerLogin
             /*$messerr = "invalid username or password";
             echo $messerr;
             echo "<script>console.log ($messer);</script>";*/
-            ControllerLogin::displayLogin('Mot de passe et/ou login invalide(s)');
+            ControllerLogin::displayLogin('Mot de passe et/ou login invalide(s)', true);
         }
     }
 
@@ -55,8 +55,7 @@ class ControllerLogin
     {
         session_start();
         session_destroy();
-        $logout = "Déconnecté avec succès";
-        ControllerLogin::displayLogin($logout);
+        ControllerLogin::displayLogin("Déconnecté avec succès");
     }
 
     public static function register()
