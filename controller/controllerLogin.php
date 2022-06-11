@@ -3,7 +3,7 @@
 class ControllerLogin
 {
 
-    public static function displayLogin()
+    public static function displayLogin($messageErreur = NULL)
     {
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
@@ -47,8 +47,7 @@ class ControllerLogin
             /*$messerr = "invalid username or password";
             echo $messerr;
             echo "<script>console.log ($messer);</script>";*/
-            echo "Mot de passe et/ou login invalide(s)";
-            ControllerLogin::displayLogin();
+            ControllerLogin::displayLogin('Mot de passe et/ou login invalide(s)');
         }
     }
 
@@ -56,9 +55,7 @@ class ControllerLogin
     {
         session_destroy();
         $logout = "Déconnecté avec succès";
-            echo $logout;
-            echo "<script>console.log ($logout);</script>";
-        ControllerLogin::displayLogin();
+        ControllerLogin::displayLogin($logout);
     }
 
     public static function register()
@@ -74,18 +71,15 @@ class ControllerLogin
 
         if (!empty($uname) && !empty($psw) && !empty($email) && !empty($phone_number)) {
             if(user::checkEmailExist($email)){
-                echo " Email déjà utilisée! ";
-                ControllerLogin::displayRegister();
+                ControllerLogin::displayRegister("Email déjà utilisée!");
             }
             else{
             user::addUser($uname, $psw, $email, $phone_number, $balance);
-            echo " Compte créé avec succès! ";
-            ControllerLogin::displayLogin();
+            ControllerLogin::displayLogin("Compte créé avec succès!");
             }
         } 
         else {
-            echo "Champ(s) vide(s)!";
-            ControllerLogin::displayRegister();
+            ControllerLogin::displayRegister("Champ(s) vide(s)!");
         }
     }
 }

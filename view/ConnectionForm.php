@@ -44,7 +44,7 @@
 
                     <?php
                     if(isset($messageErreur) && $messageErreur != '') {
-                        echo '<div class="form-check d-flex justify-content-center text-danger mb-4">' .
+                        echo '<div class="form-check d-flex justify-content-center mb-4">' .
                         $messageErreur .
                         '</div>';
                     } ?>
