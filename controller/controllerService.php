@@ -55,11 +55,6 @@ class ControllerService {
 		require("view/update.php"); 
 	}
 
-    public static function confirmationBuyService() {
-        require_once("view/Navbar.php");
-        require("view/buyServiceConfirmation.php");
-        require_once("view/Footer.php");
-    }
 
     public static function buyService() {
       if(!empty($_GET['id']) && !empty($_SESSION['id'])) {
@@ -94,6 +89,7 @@ class ControllerService {
       }
         else {
             echo 'Vous n\'êtes pas connecté et/ou ce service n\'existe pas.';
+            ControllerHome::displayHome();
         }
     }
 
