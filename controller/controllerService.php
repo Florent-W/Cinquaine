@@ -57,6 +57,12 @@ class ControllerService {
 		require("view/update.php"); 
 	}
 
+    public static function confirmationBuyService() {
+        require_once("view/Navbar.php");
+        require("view/buyServiceConfirmation.php");
+        require_once("view/Footer.php");
+    }
+
     public static function buyService() {
       if(!empty($_GET['id']) && $_SESSION['id']) {
             $id_service = $_GET['id'];
