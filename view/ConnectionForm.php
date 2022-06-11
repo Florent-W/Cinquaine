@@ -43,16 +43,3 @@
     </div>
   </div>
 </section>
-<?php if (isset($messageErreur) && $messageErreur != '') : ?>
-  <div class="toast align-items-center bg-success text-light border-0 top-0 end-0 mt-3 me-3 position-absolute">
-    <div class="toast-body d-flex justify-content-between align-items-center">
-      <?php echo $messageErreur ?>
-      <i class="bi bi-check fs-4"></i>
-    </div>
-  </div>
-<?php endif ?>
-<script>
-  const toastElList = document.querySelectorAll('.toast')
-  const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl))
-  toastList.forEach(e => e.show());
-</script>
