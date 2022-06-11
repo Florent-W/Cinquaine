@@ -39,7 +39,9 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
             else if (isset($_SESSION["id"]) && $_SESSION["id"] != $service->getIdUser()) { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=confirmationBuyService&id=<?php echo $service->getId(); ?>">Acheter</a></div>
             <?php }
-            ?>
+            else { ?>
+                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a></div>
+            <?php } ?>
         </div>
     </div>
     <img class="card-img-top" src="<?php echo $imgSrc; ?>" style="object-fit: cover;" />
