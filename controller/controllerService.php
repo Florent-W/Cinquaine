@@ -24,7 +24,7 @@ class ControllerService {
 		// Need to control the rights of the user
 		$id = $_GET["id"];
 		Service::deleteServiceById($id);
-		self::createService();
+        ControllerHome::displayProfile();
 	}
 
 	public static function createService() {

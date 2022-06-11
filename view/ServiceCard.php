@@ -34,7 +34,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 ?>
             </div>
             <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) : ?>
-                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.html?controller=controllerService&action=deleteService">Supprimer</a></div>
+                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
             <?php else : ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a></div>
             <?php endif ?>
