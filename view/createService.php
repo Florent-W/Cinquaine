@@ -3,7 +3,7 @@
         background: rgba(31, 101, 126, 0.6);
     }
 </style>
-<section style="background-color: #eee; padding: 50px">
+<section style="padding: 50px">
   <div class="container">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
