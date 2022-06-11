@@ -10,7 +10,7 @@ class ControllerLogin
         require_once("view/Footer.php");
         require_once("view/FormToast.php");
     }
-    public static function displayRegister($message)
+    public static function displayRegister($message = NULL)
     {
         require_once("view/Navbar.php");
         require_once("view/RegisterForm.php");
