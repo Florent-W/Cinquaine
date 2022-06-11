@@ -37,15 +37,17 @@
                       Se souvenir du mot de passe
                     </label>
                   </div>
-                  <div class="form-check d-flex justify-content-center mb-4">
-                    <div class="psw" style="margin-top: 10px">
-                    <a href="#">Mot de passe oublié?</a>
-                    </div>
-                  </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button class="btn btn-lg"><a style="text-decoration: none; color: inherit;" href="index.php?controller=controllerLogin&action=displayRegister">Inscription</a></button>
                   </div>
+
+                    <?php
+                    if(isset($messageErreur) && $messageErreur != '') {
+                        echo '<div class="form-check d-flex justify-content-center text-danger mb-4">' .
+                        $messageErreur .
+                        '</div>';
+                    } ?>
 
                 </form>
 
