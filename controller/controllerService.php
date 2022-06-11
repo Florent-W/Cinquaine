@@ -80,6 +80,8 @@ class ControllerService {
                 User::increaseBalance($id_seller, $price_service);
 
                 Service::addBuyer($id_service, $id_user);
+
+				ControllerHome::displayHome();
             }
             else {
                 echo 'Vous êtes trop pauvre pour acheter ce service';
