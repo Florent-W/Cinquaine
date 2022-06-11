@@ -55,6 +55,7 @@ class ControllerLogin
 
     public static function logout()
     {
+        session_start();
         session_destroy();
         ControllerLogin::displayLogin("Déconnecté avec succès");
     }

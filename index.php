@@ -21,7 +21,9 @@
 	require_once("controller/controllerSeeder.php");
 	require_once("controller/controllerSearch.php");
 
-	session_start();
+    if((session_status() == PHP_SESSION_ACTIVE)) {
+        session_start();
+    }
 
 	if(isset($_GET['action'])) {
 		$action = $_GET['action'];
