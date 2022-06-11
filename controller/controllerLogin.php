@@ -8,12 +8,14 @@ class ControllerLogin
         require_once("view/Navbar.php");
         require_once("view/ConnectionForm.php");
         require_once("view/Footer.php");
+        require_once("view/FormToast.php");
     }
-    public static function displayRegister()
+    public static function displayRegister($message)
     {
         require_once("view/Navbar.php");
         require_once("view/RegisterForm.php");
         require_once("view/Footer.php");
+        require_once("view/FormToast.php");
     }
 
     public static function login()
