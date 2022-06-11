@@ -28,9 +28,7 @@ class ControllerService {
 	}
 
 	public static function createService() {
-		$services = Service::getAllServices();
 		$types_service = TypeService::getAllTypesServices();
-		$users = User::getAllUsers();
 		require_once("view/Navbar.php");
 		require("view/createService.php");
 		require_once("view/Footer.php");
