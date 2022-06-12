@@ -7,8 +7,8 @@
     $services = Service::getAllServices();
     $filteredservices = array_filter($services, function ($ser) use ($saisie, $categorie) {
       return ($ser->getIdTypeService() == $categorie &&
-        (strpos(strval($ser->getTitle()), strval($saisie))  !== false ||
-          strpos(strval($ser->getDescription()), strval($saisie)) !== false)
+        (strpos(strval(strtoupper($ser->getTitle())), strtoupper(strval($saisie)))  !== false ||
+          strpos(strtoupper(strval($ser->getDescription())), strtoupper(strval($saisie))) !== false)
       );
     });
     $filteredservices = array_values($filteredservices);
@@ -24,8 +24,9 @@
       $page = htmlspecialchars($_GET["page"]);
     }
 
+    $count = 0;
+    for ($i = ($page - 1) * $itemperpage; ($i < ($itemperpage * $page) - 1) && ($count < count($filteredservices)); $i++) {
 
-    for ($i = ($page - 1) * $itemperpage; $i < ($itemperpage * $page) - 1; $i++) {
       $serviceName = TypeService::getTypeService($filteredservices[$i]->getIdTypeService())->getName();
       $imgSrc = "assets/image/" . $serviceName . ".jpg";
       echo "<div class='card mb-3' style='max-width: 900px;'>
@@ -42,6 +43,7 @@
                             </div>
                           </div>
                         </div>";
+      $count++;
     }
 
     echo "  <div aria-label='Page navigation'>

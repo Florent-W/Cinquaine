@@ -36,9 +36,9 @@
                     </div>
                         <input id="oSaisie" name="oSaisie"
                         <?php
-                        if(isset($_POST["oSaisie"]))
+                        if(isset($_GET["oSaisie"]))
                         {
-                            $saisie = htmlspecialchars($_POST["oSaisie"]);
+                            $saisie = htmlspecialchars($_GET["oSaisie"]);
 
                             echo " value='";
                             echo $saisie;
