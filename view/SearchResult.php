@@ -59,7 +59,13 @@
                                 </div>
                             </div>
                             </div>
-                            
+                            <div class='position-absolute bottom-0 pb-2 w-100' style='left: 160px'>
+                              <div class='d-flex justify-content-between align-items-end m-2'>
+                                <div style='height: max-content; width: max-content;'>
+                                  <div class='text-center'><a style='border: none!important;' class='btn btn-outline-danger mt-auto'>Supprimer</a></div>
+                                </div>
+                              </div>
+                            </div>
                             <div class='col-md-8'>
                               <div class='card-body'>
                                 <h5 class='card-title fw-bolder'>" . $filteredservices[$i]->getTitle() . "</h5>
