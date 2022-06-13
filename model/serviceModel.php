@@ -157,12 +157,14 @@ class Service {
 		}
     }
 
-    public static function addBuyer($id_service, $id_user) {
-        $query = "INSERT INTO service_acheteurs (id_user, id_service) VALUES (:id_user, :id_service)";
+    public static function addBuyer($id_service, $id_user, $comment) {
+        $query = "INSERT INTO service_acheteurs (id_user, id_service, comment) VALUES (:id_user, :id_service, :comment)";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array(
             "id_service" => $id_service,
-            "id_user" => $id_user
+            "id_user" => $id_user,
+            "comment" => $comment
+
         );
         try {
             $p_query->execute($values);

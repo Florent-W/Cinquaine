@@ -77,6 +77,7 @@ class ControllerService {
       if(!empty($_GET['id']) && !empty($_SESSION['id'])) {
             $id_service = $_GET['id'];
             $id_user = $_SESSION['id'];
+			$comment = $_POST['comment'];
 
             $user = User::getUserById($id_user);
             $balance = $user->getBalance();
@@ -95,7 +96,7 @@ class ControllerService {
 
                 User::increaseBalance($id_seller, $price_service);
 
-                Service::addBuyer($id_service, $id_user);
+                Service::addBuyer($id_service, $id_user, $comment);
 
 				ControllerHome::displayHome();
             }
