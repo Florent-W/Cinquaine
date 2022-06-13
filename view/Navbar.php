@@ -2,7 +2,7 @@
   <a href="index.php" class="position-absolute" style="z-index: 99;"> <img class="brandlogo" src="assets/image/Service.png"> </a>
   <nav class="w-100 navbar navbar-expand-lg bg-dark align-items-end">
     <ul class="navbar-nav flex-fill mb-0">
-      <?php if (isset($_SESSION["id"])) : ?>
+      <?php if (isset($_SESSION["id"]) && session_status()== 2) : ?>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.php">
             Accueil
