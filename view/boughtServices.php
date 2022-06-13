@@ -10,11 +10,9 @@
                                 <div class='col-md'>";
                         require("ServiceCard.php");
 
-                        echo "
-
-                            <p>Je suis le message que j'ai écrit en commandant</p>
-                            </div>
-                        </div>";
+                        echo "<p>" . $service->getComment() . "</p>";
+                        echo "</div>";
+                        echo "</div>";
                     }
                 ?>
             </div>
