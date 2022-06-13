@@ -31,7 +31,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php?action=createService&controller=controllerService">
+          <a class="nav-link" aria-current="page" href="index.php?action=displaySoldServices&controller=controllerService">
             Services en cours
           </a>
         </li>
