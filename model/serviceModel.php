@@ -93,7 +93,23 @@ class Service {
 
     public static function getAllBoughtServicesFromUser($id_user) {
         // TODO récupérer le message qui est stocké dans service_acheteurs
-        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, S.id_user, S.title, S.description FROM services S, service_acheteurs SA WHERE S.id_service = SA.id_service AND SA.id_user = :id_user";
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, S.id_user, S.title, S.description, S.comment FROM services S, service_acheteurs SA WHERE S.id_service = SA.id_service AND SA.id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
+    public static function getAllSoldServicesFromUser($id_user) {
+        // TODO récupérer le message qui est stocké dans service_acheteurs
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, SA.id_user, S.title, S.description, S.comment FROM services S JOIN service_acheteurs SA ON S.id_service = SA.id_service WHERE S.id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array("id_user" => $id_user);
         $result = [];
@@ -221,20 +237,4 @@ class Service {
 			return false;
 		}
 	}
-
-    public static function getAllSoldServicesFromUser($id_user) {
-        // TODO récupérer le message qui est stocké dans service_acheteurs
-        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, SA.id_user, S.title, S.description FROM services S JOIN service_acheteurs SA ON S.id_service = SA.id_service WHERE S.id_user = :id_user";
-        $p_query = Connexion::pdo()->prepare($query);
-        $values = array("id_user" => $id_user);
-        $result = [];
-        try {
-            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
-            $p_query->execute($values);
-            $result = $p_query->fetchAll();
-        } catch (PDOException $e) {
-            $result["error"] = $e->getMessage();
-        }
-        return $result;
-    }
 }
