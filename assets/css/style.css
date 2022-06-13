@@ -159,9 +159,12 @@ a{
 .formprofil {
     background: rgba(31, 101, 126, 0.4);
     border-radius: 10px;
-    margin-top: 5%;
-    margin-right: 10%;
+    margin-top: 3%;
+    margin-right: 5%;
     margin-bottom: 5%;
-    margin-left: 10%;
-    padding: 7% 5%;
+    margin-left: 5%;
+    padding: 5%;
+}
+.card{
+    border: none;
 }
