@@ -30,6 +30,16 @@
             Créer un service
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php?action=createService&controller=controllerService">
+            Services en cours
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php?action=displayBoughtServices&controller=controllerService">
+            Services achetés
+          </a>
+        </li>
         <li class="nav-item ms-lg-auto">
           <a class="nav-link" href="index.php?controller=controllerLogin&action=logout">
             <i class="bi bi-box-arrow-in-left"></i>

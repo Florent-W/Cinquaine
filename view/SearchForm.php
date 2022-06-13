@@ -19,8 +19,8 @@
                             $types = TypeService::getAllTypesServices();
                             $selectedCategoryId = $types[0]->getId();
 
-                            if(isset($_POST["oCategorie"])) {
-                                $selectedCategoryId = $_POST["oCategorie"];
+                            if(isset($_GET["oCategorie"])) {
+                                $selectedCategoryId = $_GET["oCategorie"];
                             }
 
                             for($i = 0; $i < count($types); $i++) {

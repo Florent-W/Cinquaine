@@ -41,6 +41,10 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
             <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
             <?php }
+            else if (isset($_SESSION["id"]) && in_array($_SESSION["id"], $service->getBuyers())) { ?>
+                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=cancelService&service_id=<?php echo $service->getId(); ?>">Annuler</a></div>
+            <?php
+            }
             else if (isset($_SESSION["id"]) && $_SESSION["id"] != $service->getIdUser()) { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto">Acheter</a></div>
             <?php }

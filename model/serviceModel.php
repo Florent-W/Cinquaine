@@ -23,6 +23,20 @@ class Service {
     public function getTitle() {return $this->title;}
     public function getDescription() {return $this->description;}
 
+    public function getBuyers () {
+        $query = "SELECT SA.id_user FROM service_acheteurs SA WHERE SA.id_service = :id_service";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_service" => $this->getId());
+        $result = [];
+        try {
+            $p_query->execute($values);
+            $result = $p_query->fetchAll(PDO::FETCH_COLUMN);
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
     // Setter of a service
     public function setId($id_service) {$this->id_service = $id_service;}
 	public function setDateStart($date_start) {$this->date_start = $date_start;}
@@ -171,6 +185,19 @@ class Service {
 		}
 		return false;
 	}
+
+    public static function cancelServiceByIdAndUser($id_service, $id_user) {
+        $query = "DELETE FROM service_acheteurs WHERE id_service = :id_service AND id_user = :id_user";
+        $req_prep = Connexion::pdo()->prepare($query);
+        $values = array("id_service" => $id_service, "id_user" => $id_user);
+        try {
+            $req_prep->execute($values);
+            return true;
+        } catch (PDOException $e) {
+            echo "erreur : ".$e->getMessage()."<br>";
+        }
+        return false;
+    }
 
     public static function updateService($id_service, $date_start, $date_end, $id_type_service, $price, $id_user, $title, $description) {
 		$query = "UPDATE services SET date_start = :date_start, date_end = :date_end, id_type_service = :id_type_service, price = :price, id_user = :id_user, title = :title, description = :description WHERE id_service = :id_service";

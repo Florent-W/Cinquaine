@@ -27,12 +27,29 @@ class ControllerService {
         ControllerHome::displayProfile();
 	}
 
+    // Quand l'acheteur souhaite annuler l'achat
+	public static function cancelService() {
+    		// Need to control the rights of the user
+    		$service_id = $_GET["service_id"];
+    		$user_id = $_SESSION["id"];
+
+    		Service::cancelServiceByIdAndUser($service_id, $user_id);
+            ControllerService::displayBoughtServices();
+    	}
+
 	public static function createService() {
 		$types_service = TypeService::getAllTypesServices();
 		require_once("view/Navbar.php");
 		require("view/createService.php");
 		require_once("view/Footer.php");
 	}
+
+	public static function displayBoughtServices() {
+		    $services = Service::getAllBoughtServicesFromUser($_SESSION["id"]);
+    		require_once("view/Navbar.php");
+    		require("view/boughtServices.php");
+    		require_once("view/Footer.php");
+    	}
 
 	public static function createdService() {
         if(!empty($_POST['dateStart']) && !empty($_POST['dateEnd']) && !empty($_POST['idTypeService']) && !empty($_POST['price']) && !empty($_SESSION['id']) && !empty($_POST['title']) && !empty($_POST['description'])) {
