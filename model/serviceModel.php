@@ -136,12 +136,12 @@ class Service {
         return $result;
     }
 
-    public static function addService($date_start, $date_end, $id_type_service, $price, $id_user, $title, $description) {
+    public static function addService(/*$date_start, $date_end,*/ $id_type_service, $price, $id_user, $title, $description) {
         $query = "INSERT INTO services (date_start, date_end, id_type_service, price, id_user, title, description) VALUES (:date_start, :date_end, :id_type_service, :price, :id_user, :title, :description)";
         $p_query = Connexion::pdo()->prepare($query);
 		$values = array(
-			"date_start" => $date_start,
-			"date_end" => $date_end,
+			/*"date_start" => $date_start,
+			"date_end" => $date_end,*/
 			"id_type_service" => $id_type_service,
             "price" => $price,
             "id_user" => $id_user,
