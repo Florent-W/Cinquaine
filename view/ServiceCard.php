@@ -30,7 +30,6 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
     </div>
     <img class="card-img-top" src="<?php echo $imgSrc; ?>" style="object-fit: cover;" />
     </div>
-    <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>"> 
     <div class="position-absolute bottom-0 pb-2 w-100">
         <div class="d-flex justify-content-between align-items-end m-2">
             <div class="badge bg-light text-dark" style="height: max-content; width: max-content;">
@@ -38,6 +37,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 echo "avec " . User::getUserById($service->getIdUser())->getName();
                 ?>
             </div>
+            <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>"> 
             <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
             <?php }
@@ -51,8 +51,8 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
             else { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a></div>
             <?php } ?>
+            </div>
         </div>
-    </div>
     </div>
 </div>
 <div class="Description-modal modal fade" id="<?php echo $modelaId ?>" tabindex="-1">
