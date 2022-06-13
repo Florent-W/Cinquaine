@@ -10,7 +10,7 @@
                                 <div class='col-md'>";
                         require("ServiceCard.php");
 
-                        echo "<p>" . $service->getComment() . "</p>";
+                        echo "<p>" . $service->getComment($_SESSION["id"], $service->getId()) . "</p>";
                         echo "</div>";
                         echo "</div>";
                     }
