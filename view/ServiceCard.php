@@ -37,6 +37,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 echo "avec " . User::getUserById($service->getIdUser())->getName();
                 ?>
             </div>
+            <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>"> 
             <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) { ?>
                 <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
             <?php } else if (isset($_SESSION["id"]) && in_array($_SESSION["id"], $service->getBuyers())) { ?>
@@ -51,6 +52,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                     <a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a>
                 </div>
             <?php } ?>
+            </div>
         </div>
     </div>
 </div>
