@@ -109,7 +109,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                                             <label for="description" class="form-label">Veuillez saisir une description de votre demande.</label>
                                             <br>
                                             <br>
-                                            <textarea class="form-control" maxlength="200" name="description" rows="4" cols="10" placeholder="Description" id="comment"></textarea>
+                                            <textarea class="form-control" maxlength="200" name="description" rows="4" cols="10" placeholder="Description" id="description"></textarea>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
