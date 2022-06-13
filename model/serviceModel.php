@@ -37,6 +37,20 @@ class Service {
         return $result;
     }
 
+    public function getComment($id_user, $id_service) {
+        $query = "SELECT SA.comment FROM service_acheteurs SA WHERE SA.id_user = :id_user AND SA.id_service = :id_service";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user, "id_service" => $id_service);
+        $result = "";
+        try {
+            $p_query->execute($values);
+            $result = $p_query->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+        return $result["comment"];
+    }
+
     // Setter of a service
     public function setId($id_service) {$this->id_service = $id_service;}
 	public function setDateStart($date_start) {$this->date_start = $date_start;}
@@ -93,7 +107,7 @@ class Service {
 
     public static function getAllBoughtServicesFromUser($id_user) {
         // TODO récupérer le message qui est stocké dans service_acheteurs
-        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, S.id_user, S.title, S.description, S.comment FROM services S, service_acheteurs SA WHERE S.id_service = SA.id_service AND SA.id_user = :id_user";
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, S.id_user, S.title, S.description FROM services S, service_acheteurs SA WHERE S.id_service = SA.id_service AND SA.id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array("id_user" => $id_user);
         $result = [];
@@ -109,7 +123,7 @@ class Service {
 
     public static function getAllSoldServicesFromUser($id_user) {
         // TODO récupérer le message qui est stocké dans service_acheteurs
-        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, SA.id_user, S.title, S.description, S.comment FROM services S JOIN service_acheteurs SA ON S.id_service = SA.id_service WHERE S.id_user = :id_user";
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, SA.id_user, S.title, S.description FROM services S JOIN service_acheteurs SA ON S.id_service = SA.id_service WHERE S.id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array("id_user" => $id_user);
         $result = [];
