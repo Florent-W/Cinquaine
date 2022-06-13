@@ -136,12 +136,12 @@ class Service {
         return $result;
     }
 
-    public static function addService(/*$date_start, $date_end,*/ $id_type_service, $price, $id_user, $title, $description) {
+    public static function addService($date_start, $date_end, $id_type_service, $price, $id_user, $title, $description) {
         $query = "INSERT INTO services (date_start, date_end, id_type_service, price, id_user, title, description) VALUES (:date_start, :date_end, :id_type_service, :price, :id_user, :title, :description)";
         $p_query = Connexion::pdo()->prepare($query);
 		$values = array(
-			/*"date_start" => $date_start,
-			"date_end" => $date_end,*/
+			"date_start" => $date_start,
+			"date_end" => $date_end,
 			"id_type_service" => $id_type_service,
             "price" => $price,
             "id_user" => $id_user,
@@ -221,4 +221,20 @@ class Service {
 			return false;
 		}
 	}
+
+    public static function getAllSoldServicesFromUser($id_user) {
+        // TODO récupérer le message qui est stocké dans service_acheteurs
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, SA.id_user, S.title, S.description FROM services S JOIN service_acheteurs SA ON S.id_service = SA.id_service WHERE S.id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
 }
