@@ -77,6 +77,22 @@ class Service {
         return $result;
     }
 
+    public static function getAllBoughtServicesFromUser($id_user) {
+        // TODO récupérer le message qui est stocké dans service_acheteurs
+        $query = "SELECT S.id_service, S.date_start, S.date_end, S.id_type_service, S.price, S.id_user, S.title, S.description FROM services S, service_acheteurs SA WHERE S.id_service = SA.id_service AND SA.id_user = :id_user";
+        $p_query = Connexion::pdo()->prepare($query);
+        $values = array("id_user" => $id_user);
+        $result = [];
+        try {
+            $p_query->setFetchMode(PDO::FETCH_CLASS, 'Service');
+            $p_query->execute($values);
+            $result = $p_query->fetchAll();
+        } catch (PDOException $e) {
+            $result["error"] = $e->getMessage();
+        }
+        return $result;
+    }
+
     public static function getAllServicesFromUserAvailable($id_user) {
         $query = "SELECT id_service, date_start, date_end, id_type_service, price, id_user, title, description FROM services WHERE id_user = :id_user";
         $p_query = Connexion::pdo()->prepare($query);
