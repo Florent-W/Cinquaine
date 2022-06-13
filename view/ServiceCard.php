@@ -34,24 +34,23 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
         <div class="d-flex justify-content-between align-items-end m-2">
             <div class="badge bg-light text-dark" style="height: max-content; width: max-content;">
                 <?php
-                echo "avec " . User::getUserById($service->getIdUser())->getName();
+                echo User::getUserById(Service::getService($service->getId())->getIdUser())->getName();
                 ?>
             </div>
-            <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>"> 
-            <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) { ?>
-                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
-            <?php } else if (isset($_SESSION["id"]) && in_array($_SESSION["id"], $service->getBuyers())) { ?>
-                <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=cancelService&service_id=<?php echo $service->getId(); ?>">Annuler</a></div>
-            <?php
-            } else if (isset($_SESSION["id"]) && $_SESSION["id"] != $service->getIdUser()) { ?>
-                <div class="text-center confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>">
-                    <span style="border: none!important;" class="btn btn-outline-danger mt-auto">Acheter</span>
-                </div>
-            <?php } else { ?>
-                <div class="text-center">
-                    <a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a>
-                </div>
-            <?php } ?>
+            <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>">
+                <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) : ?>
+                    <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
+                <?php elseif (isset($_SESSION["id"]) && in_array($_SESSION["id"], $service->getBuyers())) : ?>
+                    <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=cancelService&service_id=<?php echo $service->getId(); ?>">Annuler</a></div>
+                <?php elseif (isset($_SESSION["id"])) : ?>
+                    <div class="text-center confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>">
+                        <span style="border: none!important;" class="btn btn-outline-danger mt-auto">Acheter</span>
+                    </div>
+                <?php else : ?>
+                    <div class="text-center">
+                        <a style="border: none!important;" class="btn btn-outline-success mt-auto" href="./index.php?controller=controllerLogin&action=displayLogin">Acheter</a>
+                    </div>
+                <?php endif ?>
             </div>
         </div>
     </div>
