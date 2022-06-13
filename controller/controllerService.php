@@ -130,5 +130,13 @@ class ControllerService {
 		require_once("view/Navbar.php");
 		require_once("view/BrowseServices.php");
 	}
+
+	public static function displaySoldServices() {
+        $services = Service::getAllSoldServicesFromUser($_SESSION["id"]);
+        require_once("view/Navbar.php");
+        require("view/soldServices.php");
+        require_once("view/Footer.php");
+    }
+ 
 }
 ?>

@@ -9,7 +9,7 @@
                     require("ServiceCard.php");
                     echo "<div class='d-flex'>";
                     echo "<b>" . User::getUserById($service->getIdUser())->getName() . ":</b>";
-                    echo "<p>Je suis le message que j'ai écrit en commandant</p>";
+                    echo "<p>" . $service->getComment() . "</p>";
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";

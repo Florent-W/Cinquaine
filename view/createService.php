@@ -16,7 +16,7 @@
 
                 <form class="mx-1 mx-md-4" action="index.php?controller=controllerService&action=createdService" method="post" class="loginform" xmlns="http://www.w3.org/1999/html">
 
-                  <div class="d-flex flex-row align-items-center mb-4">
+                  <!--<div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="dateStart">Date de début du service</label>
@@ -30,7 +30,7 @@
                       <label class="form-label" for="dateEnd">Date de fin du service</label>
                       <input type="date" name="dateEnd" class="form-control" placeholder="" />
                     </div>
-                  </div>
+                  </div>-->
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
