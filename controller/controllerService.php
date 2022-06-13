@@ -33,7 +33,11 @@ class ControllerService {
     		$service_id = $_GET["service_id"];
     		$user_id = $_SESSION["id"];
 
+            $service = Service::getService($service_id);
+            $val_service = $service->getPrice();
+
     		Service::cancelServiceByIdAndUser($service_id, $user_id);
+            User::increaseBalance($user_id, $val_service);
             ControllerService::displayBoughtServices();
     	}
 
