@@ -52,16 +52,15 @@ class ControllerService {
     	}
 
 	public static function createdService() {
-        if(!empty($_POST['dateStart']) && !empty($_POST['dateEnd']) && !empty($_POST['idTypeService']) && !empty($_POST['price']) && !empty($_SESSION['id']) && !empty($_POST['title']) && !empty($_POST['description'])) {
-			$dateStart = date("Y-m-d H:i:s", strtotime($_POST['dateStart']));
-			$dateEnd = date("Y-m-d H:i:s", strtotime($_POST['dateEnd']));
+			if(!empty($_POST['idTypeService']) && !empty($_POST['price']) && !empty($_SESSION['id']) && !empty($_POST['title']) && !empty($_POST['description'])){
 			$idTypeService = $_POST['idTypeService'];
 			$price = $_POST['price'];
 			$idUser = $_SESSION['id'];
 			$title = $_POST['title'];
             $description = $_POST['description'];
 
-            Service::addService($dateStart, $dateEnd, $idTypeService, $price, $idUser, $title, $description);
+			Service::addService($idTypeService, $price, $idUser, $title, $description);
+
 		}
         ControllerHome::displayProfile();
 	}
