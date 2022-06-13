@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
   `id_service` int NOT NULL AUTO_INCREMENT,
-  `date_start` datetime NOT NULL,
-  `date_end` datetime NOT NULL,
+  `date_start` datetime,
+  `date_end` datetime,
   `id_type_service` int NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `id_user` int NOT NULL,
@@ -96,7 +96,8 @@ COMMIT;
 
 CREATE TABLE `service_acheteurs` (
   `id_user` int(11) NOT NULL,
-  `id_service` int(11) NOT NULL
+  `id_service` int(11) NOT NULL,
+  `comment` varchar(333)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
