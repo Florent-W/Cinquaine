@@ -31,9 +31,35 @@
       $imgSrc = "assets/image/" . $serviceName . ".jpg";
       echo "<div class='card mb-3' style='max-width: 900px;'>
                           <div class='row g-0'>
+                          <div class='position-absolute top-0 h-10 w-100'>
+                          <div class='d-flex justify-content-between m-2'>
+                              <div class='d-flex flex-column gap-1'>
+                                  <div class='badge bg-info' style='height: max-content; width: max-content;'>
+                                     ". $filteredservices[$i]->getTitle() ."
+                                  </div>
+                                  <div class='badge bg-warning 'style='height: max-content; width: max-content;'>
+                                     $serviceName
+                                  </div>
+                              </div>
+                            </div>
+                            </div>
                             <div class='col-md-4'>
                               <img src=" . $imgSrc . " class='img-fluid rounded-start' alt='...'>
                             </div>
+                            <div class='position-absolute bottom-0 pb-2 w-100'>
+                            <div class='d-flex justify-content-between align-items-end m-2'>
+                              <div class='badge bg-success' style='height: max-content; width: max-content;'>
+                                ". $filteredservices[$i]->getPrice() ."
+                                <i class='bi bi-cash'></i>
+                              </div>
+                            </div>
+                            <div class='d-flex justify-content-between align-items-end m-2'>
+                                <div class='badge bg-light text-dark' style='height: max-content; width: max-content;'>
+                                    avec ". User::getUserById($filteredservices[$i]->getIdUser())->getName() ."
+                                </div>
+                            </div>
+                            </div>
+                            
                             <div class='col-md-8'>
                               <div class='card-body'>
                                 <h5 class='card-title fw-bolder'>" . $filteredservices[$i]->getTitle() . "</h5>

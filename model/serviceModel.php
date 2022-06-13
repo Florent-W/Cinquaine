@@ -136,12 +136,12 @@ class Service {
         return $result;
     }
 
-    public static function addService($date_start, $date_end, $id_type_service, $price, $id_user, $title, $description) {
+    public static function addService(/*$date_start, $date_end,*/ $id_type_service, $price, $id_user, $title, $description) {
         $query = "INSERT INTO services (date_start, date_end, id_type_service, price, id_user, title, description) VALUES (:date_start, :date_end, :id_type_service, :price, :id_user, :title, :description)";
         $p_query = Connexion::pdo()->prepare($query);
 		$values = array(
-			"date_start" => $date_start,
-			"date_end" => $date_end,
+			/*"date_start" => $date_start,
+			"date_end" => $date_end,*/
 			"id_type_service" => $id_type_service,
             "price" => $price,
             "id_user" => $id_user,
@@ -157,12 +157,14 @@ class Service {
 		}
     }
 
-    public static function addBuyer($id_service, $id_user) {
-        $query = "INSERT INTO service_acheteurs (id_user, id_service) VALUES (:id_user, :id_service)";
+    public static function addBuyer($id_service, $id_user, $comment) {
+        $query = "INSERT INTO service_acheteurs (id_user, id_service, comment) VALUES (:id_user, :id_service, :comment)";
         $p_query = Connexion::pdo()->prepare($query);
         $values = array(
             "id_service" => $id_service,
-            "id_user" => $id_user
+            "id_user" => $id_user,
+            "comment" => $comment
+
         );
         try {
             $p_query->execute($values);
