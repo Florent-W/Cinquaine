@@ -59,7 +59,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="price">Prix</label>
-                      <input type="number" name="price" class="form-control" placeholder="Entrer un prix" />
+                      <input type="number" min="0.00" max="10000.00" step="0.01" oninput="validity.valid||(value='');" name="price" class="form-control" placeholder="Entrer un prix" />
                     </div>
                   </div>
 
