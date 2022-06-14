@@ -4,13 +4,14 @@ require_once("./model/serviceModel.php");
 class ControllerHome
 {
 
-	public static function displayHome()
+	public static function displayHome($message = NULL, $isError = false)
 	{
 		$services = Service::getAllServices();
 		require_once("view/Navbar.php");
 		require_once("view/SearchForm.php");
 		require_once("view/Homepage.php");
 		require_once("view/Footer.php");
+        require_once("view/FormToast.php");
 	}
 
 	public static function displayProfile()
