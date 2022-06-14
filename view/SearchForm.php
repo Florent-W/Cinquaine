@@ -5,15 +5,16 @@
 </style>
 <section  class="py-5">
     <form action="index.php?controller=ControllerSearch&action=displaySearch" method="get">
-        <div class="container">
+        <div class="container searchform">
             <form class="form-inline" action="/recherche/" method="get">
                 <input type="hidden" name="controller" value="ControllerSearch">
                 <input type="hidden" name="action" value="displaySearch">
 
                 <fieldset>
-                <div class="input-group">
+                <div class="form-group row">
+                <div class="col-md-2">
                     <div class="input-group-prepend">
-                    <select id="oCategorie" name="oCategorie" class="form-control">
+                    <select id="oCategorie" name="oCategorie" class="form-control col-sm-2">
                         <?php
 
                             $types = TypeService::getAllTypesServices();
@@ -34,6 +35,8 @@
                         ?>
                     </select>
                     </div>
+                </div>
+                    <div class="col-md-7">
                         <input id="oSaisie" name="oSaisie"
                         <?php
                         if(isset($_GET["oSaisie"]))
@@ -44,11 +47,13 @@
                             echo $saisie;
                             echo "'";
                         }
-                        ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . .">
-                        <div class="input-group-append">
-                        <button class="btn btn-secondary" type="submit" style="width:200px">Recherche</button>
+                        ?> type="text" class="form-control" aria-label="Saisie de mots clés" required="required" placeholder="Saisie de mots clés . . ." class="col-sm-10">
+                        
                     </div>
-                </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-secondary" type="submit" class="col-sm-3">Recherche</button>
+                    </div>
+                    </div>
                 </fieldset>
             </form>
         </div>
