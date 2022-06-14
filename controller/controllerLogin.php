@@ -18,7 +18,7 @@ class ControllerLogin
         require_once("view/FormToast.php");
     }
 
-    public static function login()
+    public static function login() //permet de se connecter à un compte avec un nom d'utilisateur et un mot de passe
     {
         require_once("conf/Connexion.php");
         //ControllerHome::displayHome();
@@ -53,13 +53,13 @@ class ControllerLogin
         }
     }
 
-    public static function logout()
+    public static function logout() //permet de se déconnecter
     {
         session_destroy();
         ControllerLogin::displayLogin("Déconnecté avec succès");
     }
 
-    public static function register()
+    public static function register() //permet de créer un compte
     {
         require_once("conf/Connexion.php");
         //ControllerHome::displayHome();
