@@ -28,7 +28,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 </div>
             </div>
         </div>
-        <img class="card-img-top" src="<?php echo $imgSrc; ?>" style="object-fit: cover;" />
+        <img class="card-img-top rounded" src="<?php echo $imgSrc; ?>" style="object-fit: cover;" />
     </div>
     <div class="position-absolute bottom-0 pb-2 w-100">
         <div class="d-flex justify-content-between align-items-end m-2">
