@@ -28,8 +28,9 @@
     for ($i = ($page - 1) * $itemperpage; ($i < ($itemperpage * $page) - 1) && ($count < count($filteredservices)); $i++) {
 
       $serviceName = TypeService::getTypeService($filteredservices[$i]->getIdTypeService())->getName();
+      $confirmationId = "confirmation-service" . $filteredservices[$i]->getId();
       $imgSrc = "assets/image/" . $serviceName . ".jpg";
-      echo "<div class='card mb-3' style='max-width: 900px;'>
+      echo "<div class='card mb-3' style='max-width: 1000px;'>
                           <div class='row g-0'>
                           <div class='position-absolute top-0 h-10 w-100'>
                           <div class='d-flex justify-content-between m-2'>
@@ -59,10 +60,27 @@
                                 </div>
                             </div>
                             </div>
-                            <div class='position-absolute bottom-0 pb-2 w-100' style='left: 160px'>
+                            <div class='position-absolute bottom-0 pb-2 w-100' style='left: 220px'>
                               <div class='d-flex justify-content-between align-items-end m-2'>
                                 <div style='height: max-content; width: max-content;'>
-                                  <div class='text-center'><a style='border: none!important;' class='btn btn-outline-danger mt-auto'>Supprimer</a></div>
+                                <div class='confirmationformodal' data-bs-toggle='modal' data-bs-target=' '#' ". $confirmationId ." '>
+                                "; if (isset($_SESSION['id']) && $_SESSION['id'] == $filteredservices[$i]->getIdUser()) {
+                                 echo "<div class='text-center'><a style='border: none!important;' class='btn btn-outline-danger mt-auto' href='./index.php?controller=controllerService&action=deleteService&id=" . $filteredservices[$i]->getId() . "'>Supprimer</a></div>
+                                ";}
+                                 elseif (isset($_SESSION['id']) && in_array($_SESSION['id'], $filteredservices[$i]->getBuyers())) {
+                                 echo "<div class='text-center'><a style='border: none!important;' class='btn btn-outline-danger mt-auto' href='./index.php?controller=controllerService&action=cancelService&service_id=" . $filteredservices[$i]->getId() . "'>Annuler</a></div>
+                                ";}
+                                elseif (isset($_SESSION['id']) ) {
+                                 echo "<div class='text-center confirmationformodal' data-bs-toggle='modal' data-bs-target=' " . "#" . $confirmationId ." '>
+                                           <span style='border: none!important' class='btn btn-outline-danger mt-auto'>Acheter</span>
+                                       </div>
+                                ";}
+                                else {
+                                  echo "<div class='text-center'>
+                                     <a style='border: none!important'class='btn btn-outline-success mt-auto' href='./index.php?controller=controllerLogin&action=displayLogin'>Acheter</a>
+                                  </div>
+                                 ";} echo"
+                                </div>
                                 </div>
                               </div>
                             </div>
