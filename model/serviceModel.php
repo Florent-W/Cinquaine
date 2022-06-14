@@ -46,9 +46,9 @@ class Service {
             $p_query->execute($values);
             $result = $p_query->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            return $e->getMessage();
+            echo $e->getMessage();
         }
-        return $result["comment"];
+        return $result["comment"] ?? null;
     }
 
     // Setter of a service

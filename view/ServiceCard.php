@@ -38,7 +38,7 @@ $imgSrc = "assets/image/" . $serviceName . ".jpg";
                 ?>
             </div>
             <div class="confirmationformodal" data-bs-toggle="modal" data-bs-target="<?php echo "#" . $confirmationId ?>">
-                <?php if (isset($_SESSION["id"]) && $_SESSION["id"] == $service->getIdUser()) : ?>
+                <?php if (isset($_SESSION["id"]) && ($_SESSION["id"] == $service->getIdUser() || $service->getComment($service->getIdUser(), $service->getId()) !== null)) : ?>
                     <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=deleteService&id=<?php echo $service->getId(); ?>">Supprimer</a></div>
                 <?php elseif (isset($_SESSION["id"]) && in_array($_SESSION["id"], $service->getBuyers())) : ?>
                     <div class="text-center"><a style="border: none!important;" class="btn btn-outline-danger mt-auto" href="./index.php?controller=controllerService&action=cancelService&service_id=<?php echo $service->getId(); ?>">Annuler</a></div>
