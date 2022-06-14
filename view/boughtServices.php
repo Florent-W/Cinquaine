@@ -1,4 +1,8 @@
-
+<style>
+    .nav-item:nth-child(6){
+        background: rgba(31, 101, 126, 0.6);
+    }
+</style>
 <div class="container pt-2 pb-2">
     <div class="row justify-content-center text-dark formprofil">
         <div class="col-lg-7 order-md-first">
