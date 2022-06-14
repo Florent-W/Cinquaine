@@ -42,12 +42,7 @@ class controllerSeeder {
         }
 
 
-        // Then add 1 Services one of each type, 2 per user
-
-        // For an easier date management every service will start tomorrow and end next week
-        $serviceStartDate = date("Y-m-d H:i:s", strtotime("+1 day"));
-        $serviceEndDate = date("Y-m-d H:i:s", strtotime("+7 day"));
-
+        // Then add multiple services of each type
         $serviceDataSets = [
             [1, 1, "Faire une paella", "Expert en cuisine depuis environ 10 ans, je suis chef. Je vous propose ce service pendant lequel nous allons, ensemble, étape par étape, apprendre à préparer une paella. J'espère que cela vous plaira."],
             [1, 1, "Apprendre à préparer une tarte aux fruits", "Expert en cuisine depuis environ 10 ans, je suis chef. Je vous propose ce service pendant lequel nous allons, ensemble, étape par étape, apprendre à préparer une tarte aux fruits (fraises, bananes, mirabelles...). J'espère que cela vous plaira."],
@@ -108,7 +103,7 @@ class controllerSeeder {
         ];
 
         foreach($serviceDataSets as $insertedDataSet) {
-            $resInsert = Service::addService($serviceStartDate, $serviceEndDate, $insertedDataSet[0], random_int(90, 160), $insertedDataSet[1], $insertedDataSet[2], $insertedDataSet[3]);
+            $resInsert = Service::addService($insertedDataSet[0], rand(80*10, 125*10)/10, $insertedDataSet[1], $insertedDataSet[2], $insertedDataSet[3]);
             
             if(!$resInsert) {
                 print ("ERROR WITH SERVICE SEEDER INSERT WITH VALUES : " . $insertedDataSet[0] . $insertedDataSet[1] . $insertedDataSet[2]);
