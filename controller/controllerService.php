@@ -77,6 +77,7 @@ class ControllerService {
 
 
     public static function buyService() {
+		$message = null;
       if(!empty($_GET['id']) && !empty($_SESSION['id'])) {
             $id_service = $_GET['id'];
             $id_user = $_SESSION['id'];
@@ -101,17 +102,15 @@ class ControllerService {
 
                 Service::addBuyer($id_service, $id_user, $comment);
 
-				ControllerHome::displayHome();
             }
             else {
-                echo 'Vous n\'avez pas assez d\'argent pour acheter ce service';
+                $message = "Vous n'avez pas assez d'argent pour acheter ce service";
             }
-            ControllerHome::displayHome();
       }
         else {
-            echo 'Vous n\'êtes pas connecté et/ou ce service n\'existe pas.';
-            ControllerHome::displayHome();
+            $message = "Vous n'êtes pas connecté et/ou ce service n'existe pas.";
         }
+		ControllerHome::displayHome($message, isset($message));
     }
 
 	public static function updatedService() {
@@ -142,4 +141,3 @@ class ControllerService {
     }
  
 }
-?>
