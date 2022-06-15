@@ -4,7 +4,7 @@
     }
 </style>
 <div class="row formprofil">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="row justify-content-center text-dark ">
             <div class="col order-md-first mb-3">
                 <div class="card bg-light">
@@ -40,7 +40,7 @@
         <div class="row justify-content-center text-dark">
             <?php
             foreach ($services as $service) {
-                echo "    <div class='col-md-4 order-md-first' style='padding-top: 1vh'>
+                echo "    <div class='col-md order-md-first' style='padding-top: 1vh'>
                 <div class='d-grid gap-2'>";
                 require("ServiceCard.php");
                 echo "        </div>

@@ -168,7 +168,7 @@ a{
 .card{
     border: none;
 }
-.formprofil .collapsing,.formprofil .show{
+.navbar .collapsing,.navbar .show{
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -180,3 +180,12 @@ a{
 fieldset{
    min-height: 50px;
 }
+/* .Supp{
+    color: red;
+}
+.Annul{
+    color: grey;
+}
+.Achat:hover{
+    color: green;
+} */

@@ -1,13 +1,15 @@
 <div class="d-flex position-relative justify-content-center align-items-center ">
   <a href="index.php" class="position-absolute" style="z-index: 99;"> <img class="brandlogo" src="assets/image/Service.png"> </a>
   <nav class="w-100 navbar navbar-dark navbar-expand-lg bg-dark align-items-end">
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav flex-fill mb-0">
-        <?php if (isset($_SESSION["id"]) && session_status() == 2) : ?>
+
+
+    <?php if (isset($_SESSION["id"]) && session_status() == 2) : ?>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav flex-fill mb-0">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="index.php">
               Accueil
@@ -52,17 +54,19 @@
             </a>
           </li>
         <?php else : ?>
-          <li class="nav-item ms-lg-auto">
-            <a class="nav-link connexionbtn" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
-              <i class="bi bi-box-arrow-in-right"></i>
-              Se connecter
-            </a>
-          </li>
-        <?php endif ?>
-      </ul>
-    </div>
-</div>
-</nav>
+          <div>
+            <ul class="navbar-nav flex-fill mb-0">
+              <li class="nav-item ms-lg-auto">
+                <a class="nav-link connexionbtn" aria-current="page" href="index.php?controller=controllerLogin&action=displayLogin">
+                  <i class="bi bi-box-arrow-in-right"></i>
+                  Se connecter
+                </a>
+              </li>
+            <?php endif ?>
+            </ul>
+          </div>
+      </div>
+  </nav>
 </div>
 <script>
 
