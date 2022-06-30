@@ -1,4 +1,3 @@
-
 # Cinquaine
 
 Cinquaine's goal is to empower individuals and strengthen communities by providing a place through which they may exchange and help each others.
