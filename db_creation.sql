@@ -121,34 +121,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
--- Insertion des utilisateurs
-INSERT INTO users (username, password, balance, email, phone) VALUES
-("jeanbon", "cochonou", 1000, "jeanbon2000@orange.fr", "+33606060606"),
-("pierrepaul", "jacques", 1300, "ppj91400@gmail.com", "+33707070707"),
-("doralexplorateur", "jetaimebabouche", 1300, "doraexp@gmail.com", "+33699999999"),
-("calvin.yapi", "blagueurdufutur", 900, "calvin.yapi@outlook.com", "+33505050505"),
-("robertjardineur", "petunias12345", 900, "robert.jardineur@club-internet.fr", "+330640060606");
-
--- Insertion des types de services
-INSERT INTO type_service (service_name) VALUES
-("cuisine"),
-("dessin"),
-("ecommerce"),
-("informatique"),
-("jardinage"),
-("jeuxvidéo"),
-("sport"),
-("voyage");
-
--- Insertion des services
--- Note : Les valeurs pour id_user et id_service_type sont spécifiques à votre base de données
--- Vous devrez peut-être ajuster ces valeurs en fonction de vos données actuelles
-INSERT INTO services (id_user, price, id_service_type, title, description) VALUES
-(1, 80.0, 1, "Faire une paella", "Expert en cuisine depuis environ 10 ans, je suis chef. Je vous propose ce service pendant lequel nous allons, ensemble, étape par étape, apprendre à préparer une paella. J'espère que cela vous plaira."),
-(1, 80.0, 1, "Apprendre à préparer une tarte aux fruits", "Expert en cuisine depuis environ 10 ans, je suis chef. Je vous propose ce service pendant lequel nous allons, ensemble, étape par étape, apprendre à préparer une tarte aux fruits (fraises, bananes, mirabelles...). J'espère que cela vous plaira."),
